@@ -1,0 +1,46 @@
+@use './variables' as v;
+@use './mixin' as m;
+
+nav {
+    padding-block: 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .links {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+
+        .cta {
+            margin-inline-start: 0.5rem;
+        }
+
+        a {
+            color: #ffffffb6;
+            transition: color .3s ease-in-out;
+            position: relative;
+    
+            &:hover {
+                color: v.$White;
+            }
+    
+    
+        }
+    
+        a.router-link-exact-active:not(:last-child) {
+            color: v.$White;
+    
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                background-color: v.$White;
+                height: 2px;
+                width: 30px;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}

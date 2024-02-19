@@ -1,0 +1,21 @@
+@use './variables' as v;
+
+@mixin btn($bColor, $tColor, $hColor, $bsColor, $htColor, $bhColor) {
+    background-color: $bColor;
+    color: $tColor;
+    padding: 14px 34px;
+    border-radius: v.$br1;
+    box-shadow: 5px 7px $bsColor;
+    border: 1px solid v.$black;
+    font: {
+        weight: v.$fw5;
+    }
+
+    transition: all .5s ease-in-out;
+
+    &:hover, &:focus {
+        background-color: $hColor;
+        color: $htColor;
+        box-shadow: 3px 3px $bhColor;
+    }
+}
