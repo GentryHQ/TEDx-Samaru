@@ -17,7 +17,7 @@
 
 <script>
 import MarqueeComp from "../components/MarqueeComp.vue";
-import ButtonComp from "../components/Button.vue";
+import ButtonComp from "../components/ButtonComp.vue";
 import SpeakerComp from "../components/SpeakerComp.vue";
 
     export default {

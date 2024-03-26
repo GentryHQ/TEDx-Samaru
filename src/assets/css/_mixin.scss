@@ -1,9 +1,17 @@
 @use './variables' as v;
 
+//bColor is button bg color
+// tColor is text color
+// hColor is hover color
+// bsColor is box shadow color
+// htColor is text color on hover
+// bhColor is button bg color on hover
+
 @mixin btn($bColor, $tColor, $hColor, $bsColor, $htColor, $bhColor) {
     background-color: $bColor;
     color: $tColor;
     padding: 14px 34px;
+    display: inline-block;
     border-radius: v.$br1;
     box-shadow: 5px 7px $bsColor;
     border: 1px solid v.$black;
