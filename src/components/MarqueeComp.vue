@@ -1,47 +1,47 @@
 <template>
   <div class="marquee">
     <div class="marquee__group">
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
     </div>
     <div class="marquee__group" aria-hidden="true">
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
     </div>
   </div>
 
   <div class="marquee marquee2">
     <div class="marquee__group">
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
     </div>
     <div class="marquee__group" aria-hidden="true">
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
-      <span>hello there ➺</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
+      <span>LIMITED TICKETS AVAILABLE 🔥 REGISTER NOW 🔥</span>
     </div>
   </div>
 </template>
@@ -57,6 +57,8 @@ $gap: 1.25rem;
 
 .marquee {
   display: flex;
+  position: relative;
+  z-index: 8;
   overflow: hidden;
   height: 50px;
   user-select: none;
@@ -64,21 +66,8 @@ $gap: 1.25rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: v.$red;
-  transform: skewY(-3deg);
+  transform: skewY(-2deg);
   //  transform: rotate(-5deg) translateY(-30px) translateX(50px);
-}
-
-
-
-.marquee:hover {
-  -webkit-text-stroke: 1px v.$White;
-  text-stroke: 1px v.$White;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  color: transparent;
-  transition: all 0.5s ease;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .marquee2 {
@@ -88,12 +77,6 @@ $gap: 1.25rem;
   .marquee__group span {
     color: v.$red;
   }
-
-  &:hover {
-    -webkit-text-stroke: 1px v.$red;
-    text-stroke: 1px v.$red;
-  }
-
 }
 
 
@@ -104,13 +87,13 @@ $gap: 1.25rem;
   justify-content: space-between;
   gap: $gap;
   min-width: 100%;
-  animation: scroll 15s linear infinite reverse;
+  animation: scroll 25s linear infinite reverse;
 }
 
 .marquee__group span {
   color: white;
-  font-size: 2rem;
-  font-weight: v.$fw7;
+  font-size: 20px;
+  font-weight: v.$fw5;
   white-space: nowrap;
   font-family: v.$ff;
   text-transform: uppercase;
@@ -125,5 +108,4 @@ $gap: 1.25rem;
     transform: translateX(calc(-100% - 2rem));
   }
 }
-
 </style>
