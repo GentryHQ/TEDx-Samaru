@@ -107,6 +107,7 @@ export default {
     overflow: hidden;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
+    min-width: 300px;
 
     &:hover,
     &:focus {
@@ -117,7 +118,7 @@ export default {
         aspect-ratio: 1/1;
         object-fit: cover;
         height: auto;
-        width: 100%;
+        max-width: 100%;
     }
 
     .sub {

@@ -2,6 +2,8 @@
 import MarqueeComp from "../components/MarqueeComp.vue";
 import FaqComp from "../components/FaqComp.vue";
 import ButtonComp from "../components/ButtonComp.vue";
+import SpeakerComp from "../components/SpeakerComp.vue";
+
 </script>
 
 <template>
@@ -16,19 +18,28 @@ import ButtonComp from "../components/ButtonComp.vue";
 
     <MarqueeComp />
 
-    <div class="partners">
+    <div class="community">
       <div class="container">
-        <h2>We're proud to be partnered with:</h2>
-        <div class="logos">
-          <img src="../assets/images/sponsor_logo1.png" alt="Logo">
-          <img src="../assets/images/sponsor_logo1.png" alt="Logo">
-          <img src="../assets/images/sponsor_logo1.png" alt="Logo">
-          <img src="../assets/images/sponsor_logo1.png" alt="Logo">
-          <img src="../assets/images/sponsor_logo1.png" alt="Logo">
+        <h2>Take a glimpse view of <span>Samaru</span> community</h2>
+        <div class="vidWrapper">
+          <iframe class="video" src="https://www.youtube-nocookie.com/embed/20adDr7Felw?si=Wg9whmsmC_gA9Ntx"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <router-link :to="{ name: 'sponsors' }" class="btn">
-          See All Sponsor
-        </router-link>
+      </div>
+    </div>
+
+    <div class="speaker">
+      <div class="container">
+        <h2>Meet our <span>seasoned</span> speakers</h2>
+
+        <div class="speaker-wrapper">
+          <div class="slider">
+            <SpeakerComp />
+          </div>
+
+        </div>
       </div>
     </div>
 
@@ -57,6 +68,7 @@ import ButtonComp from "../components/ButtonComp.vue";
   justify-content: center;
   align-items: center;
   z-index: 1;
+  color: v.$White;
 
   &::after {
     content: '';
@@ -89,5 +101,45 @@ import ButtonComp from "../components/ButtonComp.vue";
       v.$White,
       v.$White )
   }
+}
+
+.community {
+  margin-block: 100px 5rem;
+  text-align: center;
+
+  h2 {
+    font-size: 40px;
+    max-inline-size: 560px;
+    margin-inline: auto;
+    font-weight: v.$fw7;
+
+    span {
+      font-weight: inherit;
+      color: v.$primary-500;
+    }
+  }
+
+  .video {
+    margin-block-start: 2.5rem;
+    aspect-ratio: 16/9;
+    width: 100%;
+    border-radius: 8px;
+    @include m.boxShadow(v.$red);
+  }
+
+}
+
+.speaker {
+  margin-block: 2.5rem;
+
+  &-wrapper {
+    
+    .slider {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+
 }
 </style>
