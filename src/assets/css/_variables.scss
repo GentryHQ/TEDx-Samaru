@@ -1,7 +1,26 @@
 // Color
 $black: #000;
-$White: #F2F2F2;
+$White: #fff;
+
+
 $red: #EF3644;
+$primary-50: #fde6ea;
+$primary-100: #f9b0bc;
+$primary-200: #f68a9c;
+$primary-300: #f2546f;
+$primary-400: #ef3353;
+$primary-500: #eb0028;
+$primary-600: #d60024;
+$primary-700: #a7001c;
+$primary-800: #810016;
+$primary-900: #630011;
+
+
+$error: #ff6363;
+$warning: #f9cc59;
+$info: #2F80ED;
+$success: #27AE60;
+
 
 // Font
 $ff: 'Inter', sans-serif;
@@ -14,6 +33,6 @@ $fw7: 700;
 $fw8: 800;
 $fw9: 900;
 
-// Border Radus
+// Border Radius
 $br1: 8px;
 $br2: 1rem;
