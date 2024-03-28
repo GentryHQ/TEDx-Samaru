@@ -53,6 +53,11 @@ h1 {
 h2 {
   font-weight: v.$fw7;
   font-size: 2.5rem;
+
+  span {
+    font-weight: inherit;
+    color: v.$primary-500;
+  }
 }
 
 button {

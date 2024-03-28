@@ -1,5 +1,7 @@
 <template>
     <div class="wrapper">
+        <h2>Lets <span>answer</span> some of your burning questions</h2>
+        <p>Everything you need to know about TEDxSamaru Event</p>
         <div class="faq" v-for="(faq, index) in faqs" :key="faq.index" @click="toggleFaq(index)" :class="{active: faq.open}">
             <div class="faq_parent">
                 <div class="faq_question">
@@ -22,11 +24,11 @@
         data() {
             return {
                 faqs: [
-                    {question: 'What is TEDx hihiujiuouiooio iokojkoioikljkjio ujknkjiujiouoiojojo', answer: "It is an event", open: false},
-                    {question: 'Where is TEDx', answer: "It a p. event", open: false},
-                    {question: 'What is TEDx', answer: "It is an event", open: false},
-                    {question: 'What is TEDx', answer: "It is an event", open: false},
-                    {question: 'What is TEDx', answer: "It is an event", open: false},
+                    {question: 'What is TEDxSamaru?', answer: "TEDxSamaru is an independently organized event in the spirit of TED Talks. Our mission is to bring ideas worth spreading from the north of Nigeria to the global stage.", open: false},
+                    {question: 'When and where will TEDxSamaru take place?', answer: "It a p. event", open: false},
+                    {question: 'What is the theme of TEDxSamaru?', answer: "It is an event", open: false},
+                    {question: 'How can I get tickets to TEDxSamaru?', answer: "It is an event", open: false},
+                    {question: 'What is the eligibility criteria to attend TEDxSamaru?', answer: "It is an event", open: false},
                 ]
             }
         },

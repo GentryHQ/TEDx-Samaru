@@ -3,8 +3,8 @@ import MarqueeComp from "../components/MarqueeComp.vue";
 import FaqComp from "../components/FaqComp.vue";
 import ButtonComp from "../components/ButtonComp.vue";
 import SpeakerComp from "../components/SpeakerComp.vue";
-
 </script>
+
 
 <template>
   <main>
@@ -33,19 +33,62 @@ import SpeakerComp from "../components/SpeakerComp.vue";
     <div class="speaker">
       <div class="container">
         <h2>Meet our <span>seasoned</span> speakers</h2>
-
         <div class="speaker-wrapper">
-          <div class="slider">
-            <SpeakerComp />
-          </div>
-
+          <SpeakerComp :isSlider="true" />
+          <router-link :to="{ name: 'speakers' }" class="nBtn">
+            SEE ALL SPEAKERS
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5.5 18.478L17.4779 6.50002L8.63909 6.50002L8.63909 5.00002L20.0386 5.00002L20.0386 16.3995H18.5386V7.56068L6.56066 19.5386L5.5 18.478Z"
+                fill="#EB0028" />
+            </svg>
+          </router-link>
         </div>
       </div>
     </div>
 
+    <section class="sponsors">
+      <div class="container">
+        <div class="sponsors-wrapper">
+          <div class="words">
+            <h2>Become a
+              <span>Sponsor</span>
+            </h2>
+            <p>As a sponsor, we’re promising reach to thousands of people who are interested in your brand. What better
+              way to get your brand in front of people.</p>
+            <router-link :to="{ name: 'home' }" class="nBtn">
+              CONTACT US
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.5 18.478L17.4779 6.50002L8.63909 6.50002L8.63909 5.00002L20.0386 5.00002L20.0386 16.3995H18.5386V7.56068L6.56066 19.5386L5.5 18.478Z"
+                  fill="#EB0028" />
+              </svg>
+            </router-link>
+          </div>
 
-    <div class="container">
-      <FaqComp />
+          <div class="imgs">
+            <img src="../assets/images/BEHTEL.png" alt="Sponsors">
+            <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors">
+            <img src="../assets/images/KIEWIT.png" alt="Sponsors">
+            <img src="../assets/images/BEHTEL.png" alt="Sponsors">
+            <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors">
+            <img src="../assets/images/KIEWIT.png" alt="Sponsors">
+            <img src="../assets/images/BEHTEL.png" alt="Sponsors">
+            <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors">
+            <img src="../assets/images/KIEWIT.png" alt="Sponsors">
+            <img src="../assets/images/BEHTEL.png" alt="Sponsors">
+            <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors">
+            <img src="../assets/images/KIEWIT.png" alt="Sponsors">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="faq">
+      <div class="container">
+        <FaqComp />
+      </div>
     </div>
   </main>
 </template>
@@ -125,21 +168,56 @@ import SpeakerComp from "../components/SpeakerComp.vue";
     width: 100%;
     border-radius: 8px;
     @include m.boxShadow(v.$red);
+    background-color: v.$primary-50;
   }
 
 }
 
 .speaker {
   margin-block: 2.5rem;
+  text-align: center;
 
-  &-wrapper {
-    
-    .slider {
-      display: flex;
-      gap: 20px;
+  h2 {
+    span {
+      font-weight: inherit;
+      color: v.$primary-500;
     }
   }
 
+  &-wrapper {
+    margin-block-start: 2.5rem;
+  }
+}
 
+.sponsors {
+  margin-block: 5rem;
+
+  &-wrapper {
+    display: flex;
+    gap: 32px;
+
+    .words {
+      flex-basis: 40%;
+    }
+
+    .imgs {
+      flex-basis: 60%;
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: stretch;
+
+      img {
+        padding: 20px;
+        border: 1px solid rgb(199, 199, 199);
+        aspect-ratio: 1/1;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.faq {
+  margin-block: 5rem;
 }
 </style>

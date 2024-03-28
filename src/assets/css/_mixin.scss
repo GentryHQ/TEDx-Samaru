@@ -34,3 +34,11 @@
     box-shadow: 5px 7px $bsColor;
     border: 1px solid v.$black;
 }
+
+.nBtn {
+    margin-block-start: 2.5rem;
+    color: v.$primary-500;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+}
