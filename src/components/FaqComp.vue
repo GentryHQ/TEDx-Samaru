@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="wrapper-faq">
         <h2>Lets <span>answer</span> some of your burning questions</h2>
         <p class="txt">Everything you need to know about TEDxSamaru Event</p>
 
@@ -70,7 +70,7 @@ export default {
     opacity: 0;
 }
 
-.wrapper {
+.wrapper-faq {
     h2 {
         text-align: center;
         max-inline-size: 35.5rem;

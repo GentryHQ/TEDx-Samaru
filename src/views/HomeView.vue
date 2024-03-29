@@ -95,7 +95,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
       <div class="container">
         <h2>Will you be there?</h2>
         <p>We are looking forward to Reserving a seat for you</p>
-        <ButtonComp class="btn">Register</ButtonComp>
+        <ButtonComp class="btn">I will be there</ButtonComp>
       </div>
     </div>
   </main>
@@ -236,6 +236,10 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 
   p {
     margin-block: 20px 48px;
+  }
+
+  a {
+    text-transform: uppercase;
   }
 }
 </style>
