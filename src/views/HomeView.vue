@@ -90,6 +90,14 @@ import SpeakerComp from "../components/SpeakerComp.vue";
         <FaqComp />
       </div>
     </div>
+
+    <div class="endNote">
+      <div class="container">
+        <h2>Will you be there?</h2>
+        <p>We are looking forward to Reserving a seat for you</p>
+        <ButtonComp class="btn">Register</ButtonComp>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -219,5 +227,15 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 
 .faq {
   margin-block: 5rem;
+}
+
+.endNote {
+  background-color: v.$primary-50;
+  padding: 5rem;
+  text-align: center;
+
+  p {
+    margin-block: 20px 48px;
+  }
 }
 </style>
