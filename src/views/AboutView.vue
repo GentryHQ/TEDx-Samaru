@@ -19,7 +19,7 @@
       </p>
      </div>
 
-     <AboutSlides :images="['./../assets/images/about-page/auditorium.png']"> </AboutSlides>
+     <AboutSlides :images="['/src/assets/images/about-page/auditorium.png']"> </AboutSlides>
     </div>
    </div>
   </div>
