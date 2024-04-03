@@ -65,11 +65,13 @@
 
       <ButtonComp class="btn">Register</ButtonComp>
      </div>
+
+     <div class="masked-hall">
+      <img src="../assets/images/about-page/masked-hall.png" />
+     </div>
     </div>
    </div>
-   <!-- <div>
-    <img src="../assets/images/masked-hall.png" />
-   </div> -->
+   <div></div>
   </div>
 
   <div class="why-attend-section">
@@ -348,6 +350,9 @@ import ButtonComp from '../components/ButtonComp.vue'
   padding: 2rem;
   padding-top: 6rem;
   padding-bottom: 6rem;
+  .masked-hall {
+   display: none;
+  }
  }
 }
 
