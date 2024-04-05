@@ -58,7 +58,7 @@ $gap: 1.25rem;
 .marquee {
   display: flex;
   position: relative;
-  z-index: 8;
+  z-index: 100;
   overflow: hidden;
   height: 50px;
   user-select: none;

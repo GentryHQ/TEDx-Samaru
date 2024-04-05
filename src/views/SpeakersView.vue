@@ -117,6 +117,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
     .container {
         display: flex;
         justify-content: space-between;
+        flex-direction: row;
         gap: 32px;
     }
 
@@ -159,11 +160,12 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 
         h5 {
             margin-block-start: 1rem;
+            font-size: clamp(0.875rem, 0.6989rem + 0.7512vw, 1.375rem);
 
             span {
                 display: block;
                 padding-block-start: 16px;
-                font-size: 28px;
+                font-size: clamp(1rem, 0.7359rem + 1.1268vw, 1.75rem);
                 font-weight: v.$fw5;
             }
         }
@@ -196,6 +198,19 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 @media screen and (min-width: 1024px) {
     .wrapper {
         grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .info {
+
+        .container {
+            flex-direction: column;
+        }
+
+        .col2 {
+            padding: 20px;
+        }
     }
 }
 </style>

@@ -10,13 +10,14 @@ import SpeakerComp from "../components/SpeakerComp.vue";
   <main>
     <div class="hero">
       <div class="container">
-        <h1>ReInvent <span> Your Perspectives and Methodologies </span></h1>
+        <h1><span>ReInvent</span> Your Perspectives and Methodologies </h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reiciendis tenetur porro.</p>
-        <ButtonComp class="btn">Register</ButtonComp>
+        <ButtonComp>Register</ButtonComp>
       </div>
+      <MarqueeComp :class="marc" />
     </div>
 
-    <MarqueeComp />
+
 
     <div class="community">
       <div class="container">
@@ -106,6 +107,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 @use '../assets/css/variables' as v;
 @use '../assets/css/mixin' as m;
 
+
 .hero {
   position: relative;
   min-height: 900px;
@@ -115,11 +117,27 @@ import SpeakerComp from "../components/SpeakerComp.vue";
   background-size: cover;
   padding-block: 80px;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1;
   color: v.$White;
+
+  h1 {
+    span {
+      background-color: v.$primary-500;
+      padding: 4px 8px;
+      display: inline-block;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 70dvh;
+    margin-block-end: 50px;
+
+  }
+
 
   &::after {
     content: '';
@@ -159,15 +177,8 @@ import SpeakerComp from "../components/SpeakerComp.vue";
   text-align: center;
 
   h2 {
-    font-size: 40px;
     max-inline-size: 560px;
     margin-inline: auto;
-    font-weight: v.$fw7;
-
-    span {
-      font-weight: inherit;
-      color: v.$primary-500;
-    }
   }
 
   .video {
@@ -182,15 +193,8 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 }
 
 .speaker {
-  margin-block: 2.5rem;
+  margin-block: 80px;
   text-align: center;
-
-  h2 {
-    span {
-      font-weight: inherit;
-      color: v.$primary-500;
-    }
-  }
 
   &-wrapper {
     margin-block-start: 2.5rem;
@@ -202,10 +206,15 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 
   &-wrapper {
     display: flex;
+    flex-direction: row;
     gap: 32px;
 
     .words {
       flex-basis: 40%;
+
+      h2 {
+        margin-block-end: 1rem;
+      }
     }
 
     .imgs {
@@ -223,6 +232,10 @@ import SpeakerComp from "../components/SpeakerComp.vue";
       }
     }
   }
+
+  .nBtn {
+    justify-content: start;
+  }
 }
 
 .faq {
@@ -231,7 +244,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 
 .endNote {
   background-color: v.$primary-50;
-  padding: 5rem;
+  padding-block: 5rem;
   text-align: center;
 
   p {
@@ -241,5 +254,17 @@ import SpeakerComp from "../components/SpeakerComp.vue";
   a {
     text-transform: uppercase;
   }
+}
+
+@media screen and (max-width: 500px) {
+  .sponsors {
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
 }
 </style>
