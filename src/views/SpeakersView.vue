@@ -37,6 +37,7 @@
     </div>
 
     <div class="wrapper">
+        <h2>Our Speakers for this event</h2>
         <div class="container">
             <SpeakerComp :isSlider="false" />
         </div>
@@ -127,7 +128,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
         padding: 2.5rem;
 
         h5 {
-            font-size: 1.375rem;
+            font-size: clamp(0.875rem, 0.6989rem + 0.7512vw, 1.375rem);
         }
     }
 
@@ -141,12 +142,12 @@ import SpeakerComp from "../components/SpeakerComp.vue";
         gap: 1rem;
 
         h3 {
-            font-size: 34px;
+            font-size: clamp(1.5rem, 1.2799rem + 0.939vw, 2.125rem);
             font-weight: v.$fw7;
 
             span {
                 display: block;
-                font-size: 1.5rem;
+                font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
             }
         }
 
@@ -173,6 +174,12 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 }
 
 .wrapper {
+    text-align: center;
+    margin-block: 5rem;
+
+    h2 {
+        padding-block-end: 1.25rem;
+    }
 
     .container {
         margin-block-start: 1.75rem;
@@ -184,8 +191,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
     }
 
     a {
-        margin-block-start: 1rem;
-        margin-inline: auto;
+        margin-block-start: 2.5rem;
     }
 }
 
@@ -208,8 +214,8 @@ import SpeakerComp from "../components/SpeakerComp.vue";
             flex-direction: column;
         }
 
-        .col2 {
-            padding: 20px;
+        .col {
+            padding: 1.875rem 1.25rem;
         }
     }
 }
