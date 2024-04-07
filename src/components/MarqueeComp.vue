@@ -58,7 +58,7 @@ $gap: 1.25rem;
 .marquee {
   display: flex;
   position: relative;
-  z-index: 100;
+  z-index: 10;
   overflow: hidden;
   height: 50px;
   user-select: none;
@@ -67,12 +67,15 @@ $gap: 1.25rem;
   padding-bottom: 1rem;
   background-color: v.$red;
   transform: skewY(-2deg);
+  // transform: rotate(-9deg);
   //  transform: rotate(-5deg) translateY(-30px) translateX(50px);
 }
 
 .marquee2 {
   background-color: v.$White;
   transform: skewY(9deg);
+  // transform: rotate(9deg);
+
 
   .marquee__group span {
     color: v.$red;
