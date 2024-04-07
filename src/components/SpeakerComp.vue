@@ -1,20 +1,32 @@
 <template>
-    <div @click="openDialog(speaker)" v-for="speaker in speakers" :key="speaker.name" class="speaker" tabindex="0">
-        <img :src="speaker.img" :alt="speaker.name" width="400px">
+    <!-- This is not show if the isSlider is false and it's receives a Boolean props -->
+    <div v-if="isSlider">
+        <SpeakerSlider :speakers="speakers" />
+    </div>
+
+    <!-- This shows instead if I don't want to display the slider -->
+    <div v-else @click="openDialog(speaker)" v-for="speaker in speakers" :key="speaker.name" class="speaker" tabindex="0">
+        <img :src="speaker.img" :alt="speaker.name">
         <div class="sub">
             <h4>{{ speaker.name }}</h4>
             <p>{{ speaker.title }}</p>
         </div>
     </div>
-    <DialogComp v-if="selectedSpeaker" :speaker="selectedSpeaker" :open="!!selectedSpeaker" @close="selectedSpeaker = null"/>
+    <DialogComp v-if="selectedSpeaker" :speaker="selectedSpeaker" :open="!!selectedSpeaker"
+        @close="selectedSpeaker = null" />
 </template>
 <script>
 import DialogComp from "../components/DialogComp.vue";
+import SpeakerSlider from "./SpeakerSlider.vue";
 
 export default {
+    props: {
+        isSlider: Boolean,
+    },
 
     components: {
-        DialogComp
+        DialogComp,
+        SpeakerSlider
     },
 
     data() {
@@ -83,8 +95,6 @@ export default {
 
     methods: {
         openDialog(speaker) {
-            console.log("works");
-            // this.selectedSpeaker = speaker;
 
             if (this.selectedSpeaker === speaker) {
                 this.selectedSpeaker = null; // Close the dialog if it's already open for this speaker
@@ -107,6 +117,7 @@ export default {
     overflow: hidden;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
+    width: 100%;
 
     &:hover,
     &:focus {
@@ -117,7 +128,7 @@ export default {
         aspect-ratio: 1/1;
         object-fit: cover;
         height: auto;
-        width: 100%;
+        background-color: v.$primary-50;
     }
 
     .sub {
@@ -137,6 +148,8 @@ export default {
 
         p {
             color: v.$black;
+            font-size: 16px;
         }
     }
-}</style>
+}
+</style>
