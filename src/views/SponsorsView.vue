@@ -7,7 +7,7 @@
      Join a family of bold thinkers and revolutionary brands who are igniting change and
      reinvention.
     </p>
-    <ButtonComp class="btn">Register</ButtonComp>
+    <ButtonComp class="btn" route-name="contact">Get Started</ButtonComp>
    </div>
   </div>
   <div class="sponsor-text-section">
@@ -34,39 +34,39 @@
     <div class="perks-card-wrapper">
      <SponsorshipPerkCard
       :text="'Stage Recognition'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/postage.svg'"
+      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon1.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Partner Ticket'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/ticket.svg'"
+      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon2.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Logo placement on conference Website and Landing Pages'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/website.svg'"
+      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon3.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Logo placement on digital materials '"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/gg_website.svg'"
+      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon4.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Booth Space'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/booth.svg'"
+      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon5.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Logo placement on speaker videos'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/video.svg'"
+      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon6.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Promotional materials in confrence souvenir'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/bi_bag.svg'"
+      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon7.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Customized Breakout session'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/mdi_google-classroom.svg'"
+      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon8.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Activation & Lots more'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/eos-icons_activate-subscriptions-outlined.svg'"
+      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon9.png'"
      ></SponsorshipPerkCard>
     </div>
 
@@ -115,7 +115,7 @@
     </div>
 
     <div class="btn">
-     <ButtonComp>BECOME A SPONSOR</ButtonComp>
+     <ButtonComp route-name="contact">BECOME A SPONSOR</ButtonComp>
     </div>
    </div>
   </div>
@@ -123,10 +123,6 @@
   <div class="endNote">
    <div class="container">
     <h2>The Reinvention journey has begun. Will you be a pioneer on this path?</h2>
-
-    <div class="btn">
-     <ButtonComp>BECOME A SPONSOR</ButtonComp>
-    </div>
    </div>
   </div>
   <div class="faq">

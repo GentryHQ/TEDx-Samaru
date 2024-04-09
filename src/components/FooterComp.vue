@@ -13,7 +13,7 @@ import ButtonComp from "../components/ButtonComp.vue";
 
         <h5>Still have questions?</h5>
         <p>Can’t find the answer you’re looking for? Please chat to our friendly team.</p>
-        <router-link :to="{name: 'home'}" class="btn" >GET IN TOUCH</router-link>
+        <router-link :to="{name: 'contact'}" class="btn" >GET IN TOUCH</router-link>
     </div>
     <div class="endNote">
       <div class="container">
@@ -23,7 +23,7 @@ import ButtonComp from "../components/ButtonComp.vue";
       </div>
     </div>
     <div class="main-footer">
-        <div class="newsletter">
+        <div class="newsletter" id="newsletter">
             <div class="newsletter-left">
                 <h1>Join our newsletter</h1>
                 <p>We’ll send you a nice letter once per week. No spam.</p>

@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{ name: 'register' }" :class= "buttonType">
+    <router-link :to="{ name: routeName, hash: hash }" :class= "buttonType">
         <slot>Register Now</slot>
     </router-link>
 </template>
@@ -12,6 +12,14 @@ const props = defineProps({
     buttonType: {
         type: String,
         default: 'btn'
+    },
+    routeName: {
+        type: String,
+        default: 'register'
+    },
+    hash: {
+        type: String,
+        default: ''
     }
 });
 </script>

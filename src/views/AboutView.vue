@@ -83,7 +83,7 @@
       :iconSrc="'/src/assets/images/about-page/microphone-icon.svg'"
       title="Inspiring Talks and Performances:"
       description="You'll have the opportunity to hear from a diverse lineup of speakers and performers who will share their unique ideas, stories, and talents. From thought-provoking talks to captivating performances, each presentation is designed to inspire, educate, and entertain. This rich exchange of ideas can spark your creativity and open up new ways of thinking."
-      :link="{ name: 'home' }"
+      :link="{ name: 'register' }"
       buttonText="Register Now"
      ></WhyAttendCard>
 
@@ -91,7 +91,7 @@
       :iconSrc="'/src/assets/images/about-page/stack-icon.svg'"
       title="Personal Growth and Development:"
       description="By attending TEDx Samaru, you'll have the chance to expand your horizons, challenge your assumptions, and broaden your perspective on a wide range of topics. Whether you're interested in technology, entertainment, design, or social issues, you'll find something at TEDx Samaru that will stretch your mind and inspire new ways of thinking."
-      :link="{ name: 'home' }"
+      :link="{ name: 'register' }"
       buttonText="Register Now"
      ></WhyAttendCard>
     </div>
@@ -101,14 +101,14 @@
       :iconSrc="'/src/assets/images/about-page/stack-icon.svg'"
       title="Inspiration to Act:"
       description="Many attendees leave TEDx events feeling motivated and empowered to make a difference in their communities or in their personal or professional lives. The stories of innovation, overcoming challenges, and creative thinking can serve as a powerful catalyst for action. The inspiration from TEDx Samaru can be the driving force you need to change your life."
-      :link="{ name: 'home' }"
+      :link="{ name: 'register' }"
       buttonText="Register Now"
      ></WhyAttendCard>
      <WhyAttendCard
       :iconSrc="'/src/assets/images/about-page/microphone-icon.svg'"
       title="Networking Opportunities:"
       description="Attending TEDx Samaru allows you to connect with like-minded individuals who are also eager to learn and engage with new ideas. The event provides a platform for attendees to meet, discuss their interests and experiences, and potentially collaborate on future projects. This networking can be incredibly valuable for professional and personal growth."
-      :link="{ name: 'home' }"
+      :link="{ name: 'register' }"
       buttonText="Register Now"
      ></WhyAttendCard>
     </div>
@@ -143,7 +143,7 @@
        drives Samaru towards a brighter future.
       </p>
       <div style="width: fit-content">
-       <router-link :to="{ name: 'home' }" class="nBtn">
+       <a href="https://www.ted.com/about" target="_blank" class="nBtn">
         Learn more
         <svg
          width="25"
@@ -157,7 +157,7 @@
           fill="#EB0028"
          />
         </svg>
-       </router-link>
+       </a>
       </div>
      </div>
     </div>

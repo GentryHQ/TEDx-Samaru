@@ -63,7 +63,7 @@
        </form>
       </div>
      </div>
-     <img src="/src/assets/images/contact-Image.png" />
+     <img class="image" src="/src/assets/images/contact-Image.png" />
     </div>
    </div>
   </div>
@@ -145,6 +145,18 @@ label {
   flex-direction: column;
   gap: 2rem;
  }
+
+ .image {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image:hover {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.18), 0 12px 22px rgba(0, 0, 0, 0.12);
+}
+
 
  @media screen and (max-width: 768px) {
   .wrapper {

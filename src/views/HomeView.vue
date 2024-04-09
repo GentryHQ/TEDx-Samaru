@@ -13,10 +13,10 @@ import SpeakerComp from "../components/SpeakerComp.vue";
         <h1><span>ReInvent</span> your Perspectives, Challenge the Status Quo. </h1>
         <p class="section-subhead">It’s not just ideas that change the world, but the audacity to challenge them.</p>
         <div class="desktop">
-          <ButtonComp>Subscribe to newsletter</ButtonComp>
+          <ButtonComp route-name="" hash="#newsletter" >Subscribe to newsletter</ButtonComp>
         </div>
         <div class="mobile">
-          <ButtonComp>Subscribe Now</ButtonComp>
+          <ButtonComp route-name="" hash="#newsletter" >Subscribe Now</ButtonComp>
         </div>
       </div>
       <!-- <MarqueeComp :class="marc" /> -->
@@ -100,6 +100,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
         <FaqComp />
       </div>
     </div>
+    <!-- <div id="newsletter"></div> -->
   </main>
 </template>
 
@@ -168,6 +169,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
   display: flex;
  }
 
+  .btn{
     // This mixin is for button, see in css/mixin.scss
     @include m.btn(v.$White,
       v.$black,
@@ -177,6 +179,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
       v.$White,
       v.$black, )
   }
+  
 }
 
 .community {
@@ -184,10 +187,8 @@ import SpeakerComp from "../components/SpeakerComp.vue";
   text-align: center;
 
   h2 {
-  font-size: 40px;
   max-inline-size: 560px;
   margin-inline: auto;
-  font-weight: v.$fw7;
   
    span {
    font-weight: inherit;
@@ -212,11 +213,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
   &-wrapper {
     margin-block-start: 2.5rem;
   }
- }
 
- &-wrapper {
-  margin-block-start: 2.5rem;
- }
 }
 
 .sponsors {

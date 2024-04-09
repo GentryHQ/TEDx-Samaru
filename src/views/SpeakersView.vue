@@ -49,6 +49,7 @@
             <FaqComp />
         </div>
     </div> -->
+    
 </template>
 
 
@@ -199,6 +200,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 .location-info-section {
  padding-block: 5rem;
  text-align: justify;
+}
 
 .faqComp {
     margin-block: 5rem;
