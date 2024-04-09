@@ -56,5 +56,6 @@ label {
  padding: 1rem;
  border-radius: 0.5rem;
  width: 100%;
+ border: 1px solid #ccc;
 }
 </style>

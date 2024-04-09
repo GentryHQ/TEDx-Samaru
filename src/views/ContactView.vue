@@ -15,14 +15,14 @@
            :name="'First Name'"
            :label="'First Name'"
            :placeholder="'First Name'"
-           v-model="firstName"
+           v-model="form.firstName"
           ></FormInput>
           <FormInput
            class="form-group"
            :name="'Last Name'"
            :label="'Last Name'"
            :placeholder="'Last Name'"
-           v-model="lastName"
+           v-model="form.lastName"
           ></FormInput>
          </div>
 
@@ -31,7 +31,7 @@
           :name="'Email'"
           :label="'Email'"
           :placeholder="'Email'"
-          v-model="email"
+          v-model="form.email"
           type="email"
          ></FormInput>
          <FormInput
@@ -39,8 +39,8 @@
           :name="'Phone Number'"
           :label="'Phone Number'"
           :placeholder="'Phone Number'"
-          v-model="tel"
-          type="email"
+          v-model="form.phoneNumber"
+          type="tel"
          ></FormInput>
         </div>
         <div class="form-group">
@@ -50,10 +50,11 @@
           name="message"
           rows="5"
           placeholder="Write your message here"
+          v-model="form.message"
          ></textarea>
         </div>
         <div class="form-group">
-         <input type="checkbox" id="privacy" name="privacy" />
+         <input type="checkbox" id="privacy" name="privacy" v-model="form.agreedToPolicy" />
          <label for="privacy">I agree to the Privacy Policy</label>
         </div>
         <div>
@@ -75,12 +76,19 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 import FormInput from '../components/form-inputs/Input.vue'
 import ButtonComp from '../components/ButtonComp.vue'
 import FaqComp from '../components/FaqComp.vue'
 
-const nameValue = ref('')
+const form = reactive({
+ firstName: '',
+ lastName: '',
+ email: '',
+ phoneNumber: '',
+ message: '',
+ agreedToPolicy: false
+})
 </script>
 
 <style lang="scss" scoped>
@@ -118,24 +126,7 @@ input[type='checkbox'] {
  width: 100%;
 }
 
-/**
-.contact-form {
- max-width: 500px;
- margin: 0 auto;
- padding: 20px;
- border: 1px solid #ddd;
- border-radius: 5px;
-}
-form {
- .wrapper {
-  display: flex;
-  flex-direction: column;
- }
-}
-**/
-
 label {
- display: block;
  margin-bottom: 0.5rem;
 }
 .text-input {
@@ -147,13 +138,24 @@ label {
  display: flex;
  flex-direction: row;
  justify-content: space-between;
-}
+ .wrapper {
+  margin-block: 20px 48px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+ }
 
-.wrapper {
- margin-block: 20px 48px;
- padding: 3rem;
- display: flex;
- flex-direction: column;
- gap: 2rem;
+ @media screen and (max-width: 768px) {
+  .wrapper {
+   padding: 0rem;
+  }
+  .input-group {
+   flex-direction: column;
+  }
+  img {
+   display: none;
+  }
+ }
 }
 </style>
