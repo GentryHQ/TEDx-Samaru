@@ -161,12 +161,14 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 }
 
 .partners {
- background-color: v.$White;
- padding-block: 80px;
+  background-color: v.$White;
+  padding-block: 80px;
 
- .logos {
-  display: flex;
- }
+  .logos {
+    display: flex;
+  }
+
+  .btn {
 
     // This mixin is for button, see in css/mixin.scss
     @include m.btn(v.$White,
@@ -184,25 +186,19 @@ import SpeakerComp from "../components/SpeakerComp.vue";
   text-align: center;
 
   h2 {
-  font-size: 40px;
-  max-inline-size: 560px;
-  margin-inline: auto;
-  font-weight: v.$fw7;
-  
-   span {
-   font-weight: inherit;
-   color: v.$primary-500;
+    max-inline-size: 560px;
+    margin-inline: auto;
   }
- }
 
- .video {
-  margin-block-start: 2.5rem;
-  aspect-ratio: 16/9;
-  width: 100%;
-  border-radius: 8px;
-  @include m.boxShadow(v.$red);
-  background-color: v.$primary-50;
- }
+  .video {
+    margin-block-start: 2.5rem;
+    aspect-ratio: 16/9;
+    width: 100%;
+    border-radius: 8px;
+    @include m.boxShadow(v.$red);
+    background-color: v.$primary-50;
+  }
+
 }
 
 .speaker {
@@ -212,11 +208,6 @@ import SpeakerComp from "../components/SpeakerComp.vue";
   &-wrapper {
     margin-block-start: 2.5rem;
   }
- }
-
- &-wrapper {
-  margin-block-start: 2.5rem;
- }
 }
 
 .sponsors {
@@ -254,11 +245,10 @@ import SpeakerComp from "../components/SpeakerComp.vue";
   .nBtn {
     justify-content: start;
   }
-
 }
 
 .faq {
- margin-block: 5rem;
+  margin-block: 5rem;
 }
 
 .section-subhead {

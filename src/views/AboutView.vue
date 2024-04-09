@@ -72,6 +72,7 @@
      </div>
     </div>
    </div>
+   <div></div>
   </div>
 
   <div class="why-attend-section">
