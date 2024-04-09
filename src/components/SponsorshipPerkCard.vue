@@ -17,7 +17,7 @@ defineProps(['iconSrc', 'text'])
  padding: 2rem;
  display: flex;
  gap: 1rem;
- height: 150px;
+ height: 130px;
  align-items: center;
  justify-content: center;
 }
