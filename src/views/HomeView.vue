@@ -1,104 +1,125 @@
 <script setup>
-import MarqueeComp from "../components/MarqueeComp.vue";
-import FaqComp from "../components/FaqComp.vue";
-import ButtonComp from "../components/ButtonComp.vue";
-import SpeakerComp from "../components/SpeakerComp.vue";
+import MarqueeComp from '../components/MarqueeComp.vue'
+import FaqComp from '../components/FaqComp.vue'
+import ButtonComp from '../components/ButtonComp.vue'
+import SpeakerComp from '../components/SpeakerComp.vue'
 </script>
 
 
 <template>
-  <main>
-    <div class="hero">
-      <div class="container">
-        <h1>ReInvent <span> Your Perspectives and Methodologies </span></h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reiciendis tenetur porro.</p>
-        <ButtonComp class="btn">Register</ButtonComp>
-      </div>
+ <main>
+  <div class="hero">
+   <div class="container">
+    <h1>ReInvent <span> Your Perspectives and Methodologies </span></h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reiciendis tenetur porro.</p>
+    <ButtonComp class="btn">Register</ButtonComp>
+   </div>
+  </div>
+
+  <MarqueeComp />
+
+  <div class="community">
+   <div class="container">
+    <h2>Take a glimpse view of <span>Samaru</span> community</h2>
+    <div class="vidWrapper">
+     <iframe
+      class="video"
+      src="https://www.youtube-nocookie.com/embed/20adDr7Felw?si=Wg9whmsmC_gA9Ntx"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+     ></iframe>
     </div>
+   </div>
+  </div>
 
-    <MarqueeComp />
-
-    <div class="community">
-      <div class="container">
-        <h2>Take a glimpse view of <span>Samaru</span> community</h2>
-        <div class="vidWrapper">
-          <iframe class="video" src="https://www.youtube-nocookie.com/embed/20adDr7Felw?si=Wg9whmsmC_gA9Ntx"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
+  <div class="speaker">
+   <div class="container">
+    <h2>Meet our <span>seasoned</span> speakers</h2>
+    <div class="speaker-wrapper">
+     <SpeakerComp :isSlider="true" />
+     <router-link :to="{ name: 'speakers' }" class="nBtn">
+      SEE ALL SPEAKERS
+      <svg
+       width="25"
+       height="24"
+       viewBox="0 0 25 24"
+       fill="none"
+       xmlns="http://www.w3.org/2000/svg"
+      >
+       <path
+        d="M5.5 18.478L17.4779 6.50002L8.63909 6.50002L8.63909 5.00002L20.0386 5.00002L20.0386 16.3995H18.5386V7.56068L6.56066 19.5386L5.5 18.478Z"
+        fill="#EB0028"
+       />
+      </svg>
+     </router-link>
     </div>
+   </div>
+  </div>
 
-    <div class="speaker">
-      <div class="container">
-        <h2>Meet our <span>seasoned</span> speakers</h2>
-        <div class="speaker-wrapper">
-          <SpeakerComp :isSlider="true" />
-          <router-link :to="{ name: 'speakers' }" class="nBtn">
-            SEE ALL SPEAKERS
-            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M5.5 18.478L17.4779 6.50002L8.63909 6.50002L8.63909 5.00002L20.0386 5.00002L20.0386 16.3995H18.5386V7.56068L6.56066 19.5386L5.5 18.478Z"
-                fill="#EB0028" />
-            </svg>
-          </router-link>
-        </div>
-      </div>
+  <section class="sponsors">
+   <div class="container">
+    <div class="sponsors-wrapper">
+     <div class="words">
+      <h2>
+       Become a
+       <span>Sponsor</span>
+      </h2>
+      <p>
+       As a sponsor, we’re promising reach to thousands of people who are interested in your brand.
+       What better way to get your brand in front of people.
+      </p>
+      <router-link :to="{ name: 'home' }" class="nBtn">
+       CONTACT US
+       <svg
+        width="25"
+        height="24"
+        viewBox="0 0 25 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+       >
+        <path
+         d="M5.5 18.478L17.4779 6.50002L8.63909 6.50002L8.63909 5.00002L20.0386 5.00002L20.0386 16.3995H18.5386V7.56068L6.56066 19.5386L5.5 18.478Z"
+         fill="#EB0028"
+        />
+       </svg>
+      </router-link>
+     </div>
+
+     <div class="imgs">
+      <img src="../assets/images/BEHTEL.png" alt="Sponsors" />
+      <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors" />
+      <img src="../assets/images/KIEWIT.png" alt="Sponsors" />
+      <img src="../assets/images/BEHTEL.png" alt="Sponsors" />
+      <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors" />
+      <img src="../assets/images/KIEWIT.png" alt="Sponsors" />
+      <img src="../assets/images/BEHTEL.png" alt="Sponsors" />
+      <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors" />
+      <img src="../assets/images/KIEWIT.png" alt="Sponsors" />
+      <img src="../assets/images/BEHTEL.png" alt="Sponsors" />
+      <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors" />
+      <img src="../assets/images/KIEWIT.png" alt="Sponsors" />
+     </div>
     </div>
+   </div>
+  </section>
 
-    <section class="sponsors">
-      <div class="container">
-        <div class="sponsors-wrapper">
-          <div class="words">
-            <h2>Become a
-              <span>Sponsor</span>
-            </h2>
-            <p>As a sponsor, we’re promising reach to thousands of people who are interested in your brand. What better
-              way to get your brand in front of people.</p>
-            <router-link :to="{ name: 'home' }" class="nBtn">
-              CONTACT US
-              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M5.5 18.478L17.4779 6.50002L8.63909 6.50002L8.63909 5.00002L20.0386 5.00002L20.0386 16.3995H18.5386V7.56068L6.56066 19.5386L5.5 18.478Z"
-                  fill="#EB0028" />
-              </svg>
-            </router-link>
-          </div>
+  <div class="faq">
+   <div class="container">
+    <FaqComp />
+   </div>
+  </div>
 
-          <div class="imgs">
-            <img src="../assets/images/BEHTEL.png" alt="Sponsors">
-            <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors">
-            <img src="../assets/images/KIEWIT.png" alt="Sponsors">
-            <img src="../assets/images/BEHTEL.png" alt="Sponsors">
-            <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors">
-            <img src="../assets/images/KIEWIT.png" alt="Sponsors">
-            <img src="../assets/images/BEHTEL.png" alt="Sponsors">
-            <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors">
-            <img src="../assets/images/KIEWIT.png" alt="Sponsors">
-            <img src="../assets/images/BEHTEL.png" alt="Sponsors">
-            <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors">
-            <img src="../assets/images/KIEWIT.png" alt="Sponsors">
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <div class="faq">
-      <div class="container">
-        <FaqComp />
-      </div>
-    </div>
-
-    <div class="endNote">
-      <div class="container">
-        <h2>Will you be there?</h2>
-        <p>We are looking forward to Reserving a seat for you</p>
-        <ButtonComp class="btn">Register</ButtonComp>
-      </div>
-    </div>
-  </main>
+  <div class="endNote">
+   <div class="container">
+    <h2>Will you be there?</h2>
+    <p>We are looking forward to Reserving a seat for you</p>
+    <ButtonComp class="btn">Register</ButtonComp>
+   </div>
+  </div>
+ </main>
 </template>
 
 
@@ -107,135 +128,128 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 @use '../assets/css/mixin' as m;
 
 .hero {
-  position: relative;
-  min-height: 900px;
-  background-image: url('../assets/images/Background.webp');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-block: 80px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  color: v.$White;
+ position: relative;
+ min-height: 900px;
+ background-image: url('../assets/images/Background.webp');
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ padding-block: 80px;
+ text-align: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ z-index: 1;
+ color: v.$White;
 
-  &::after {
-    content: '';
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.4);
-    inset: 0;
-    z-index: -1;
-  }
+ &::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  inset: 0;
+  z-index: -1;
+ }
 
-  .btn {
-    margin-block-start: 1.25rem;
-  }
+ .btn {
+  margin-block-start: 1.25rem;
+ }
 }
 
 .partners {
-  background-color: v.$White;
-  padding-block: 80px;
+ background-color: v.$White;
+ padding-block: 80px;
 
-  .logos {
-    display: flex;
-  }
+ .logos {
+  display: flex;
+ }
 
-  .btn {
-
-    // This mixin is for button, see in css/mixin.scss
-    @include m.btn(v.$White,
-      v.$black,
-      v.$red,
-      v.$red,
-      v.$White,
-      v.$White )
-  }
+ .btn {
+  // This mixin is for button, see in css/mixin.scss
+  @include m.btn(v.$White, v.$black, v.$red, v.$red, v.$White, v.$White);
+ }
 }
 
 .community {
-  margin-block: 100px 5rem;
-  text-align: center;
+ margin-block: 100px 5rem;
+ text-align: center;
 
-  h2 {
-    font-size: 40px;
-    max-inline-size: 560px;
-    margin-inline: auto;
-    font-weight: v.$fw7;
+ h2 {
+  font-size: 40px;
+  max-inline-size: 560px;
+  margin-inline: auto;
+  font-weight: v.$fw7;
 
-    span {
-      font-weight: inherit;
-      color: v.$primary-500;
-    }
+  span {
+   font-weight: inherit;
+   color: v.$primary-500;
   }
+ }
 
-  .video {
-    margin-block-start: 2.5rem;
-    aspect-ratio: 16/9;
-    width: 100%;
-    border-radius: 8px;
-    @include m.boxShadow(v.$red);
-    background-color: v.$primary-50;
-  }
-
+ .video {
+  margin-block-start: 2.5rem;
+  aspect-ratio: 16/9;
+  width: 100%;
+  border-radius: 8px;
+  @include m.boxShadow(v.$red);
+  background-color: v.$primary-50;
+ }
 }
 
 .speaker {
-  margin-block: 2.5rem;
-  text-align: center;
+ margin-block: 2.5rem;
+ text-align: center;
 
-  h2 {
-    span {
-      font-weight: inherit;
-      color: v.$primary-500;
-    }
+ h2 {
+  span {
+   font-weight: inherit;
+   color: v.$primary-500;
   }
+ }
 
-  &-wrapper {
-    margin-block-start: 2.5rem;
-  }
+ &-wrapper {
+  margin-block-start: 2.5rem;
+ }
 }
 
 .sponsors {
-  margin-block: 5rem;
+ margin-block: 5rem;
 
-  &-wrapper {
-    display: flex;
-    gap: 32px;
+ &-wrapper {
+  display: flex;
+  gap: 32px;
 
-    .words {
-      flex-basis: 40%;
-    }
-
-    .imgs {
-      flex-basis: 60%;
-      display: grid;
-      gap: 24px;
-      grid-template-columns: 1fr 1fr 1fr;
-      justify-items: stretch;
-
-      img {
-        padding: 20px;
-        border: 1px solid rgb(199, 199, 199);
-        aspect-ratio: 1/1;
-        object-fit: contain;
-      }
-    }
+  .words {
+   flex-basis: 40%;
   }
+
+  .imgs {
+   flex-basis: 60%;
+   display: grid;
+   gap: 24px;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-items: stretch;
+
+   img {
+    padding: 20px;
+    border: 1px solid rgb(199, 199, 199);
+    aspect-ratio: 1/1;
+    object-fit: contain;
+   }
+  }
+ }
 }
 
 .faq {
-  margin-block: 5rem;
+ margin-block: 5rem;
 }
 
 .endNote {
-  background-color: v.$primary-50;
-  padding: 5rem;
-  text-align: center;
+ background-color: v.$primary-50;
+ padding: 5rem;
+ text-align: center;
 
-  p {
-    margin-block: 20px 48px;
-  }
+ p {
+  margin-block: 20px 48px;
+ }
 }
 </style>
