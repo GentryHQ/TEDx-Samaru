@@ -6,13 +6,13 @@
 
             <div class="img_box">
                 <div class="first box">
-                    <img src="@/assets/images/ted-speaker.png" alt="Ted speaker on stage speaking to people">
+                    <img :src="tedSpeakerImage1" alt="Ted speaker on stage speaking to people">
                 </div>
                 <div class="second box">
-                    <img src="@/assets/images/tedxMark.png" alt="Tedx write up">
+                    <img :src="tedxMarkImage" alt="Tedx write up">
                 </div>
                 <div class="third box">
-                    <img src="@/assets/images/tedx speaker.jpeg"
+                    <img :src="tedxSpeakerImage2"
                         alt="Ted speaker facing the audience on stage speaking to people">
                 </div>
             </div>
@@ -29,7 +29,7 @@
             </div>
 
             <div class="col2 col">
-                <img src="@/assets/images/venue.png"
+                <img :src="venueImage"
                     alt="Venue for TedxSamaru, Centre of excellence Ahmadu Bello University, Zaria">
                 <h5>We will be at the <span>Centre of excellence Ahmadu Bello University, Zaria.</span></h5>
             </div>
@@ -57,6 +57,10 @@
 // import FaqComp from "@/components/FaqComp.vue";
 import ButtonComp from "../components/ButtonComp.vue";
 import SpeakerComp from "../components/SpeakerComp.vue";
+import tedSpeakerImage1 from '@/assets/images/ted-speaker.png';
+import tedxMarkImage from '@/assets/images/tedxMark.png';
+import tedxSpeakerImage2 from '@/assets/images/tedx speaker.jpeg';
+import venueImage from '@/assets/images/venue.png';
 </script>
 
 <style lang="scss" scoped>
