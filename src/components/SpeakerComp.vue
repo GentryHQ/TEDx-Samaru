@@ -87,6 +87,50 @@ export default {
                         ig: ''
                     }
                 },
+                {
+                    name: 'Karen Chukwu', title: 'Founder/Managing Partner (Katwig & Dale)', img: './src/assets/images/speakers/1.jpg',
+                    topic: 'The Importance of Learning',
+                    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
+                    link: {
+                        fb: 'facebook.com',
+                        x: 'x.com',
+                        in: 'linkedin.com',
+                        ig: ''
+                    }
+                },
+                {
+                    name: 'Karen Chukwu', title: 'Founder/Managing Partner (Katwig & Dale)', img: './src/assets/images/speakers/1.jpg',
+                    topic: 'The Importance of Learning',
+                    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
+                    link: {
+                        fb: 'facebook.com',
+                        x: 'x.com',
+                        in: 'linkedin.com',
+                        ig: ''
+                    }
+                },
+                {
+                    name: 'Karen Chukwu', title: 'Founder/Managing Partner (Katwig & Dale)', img: './src/assets/images/speakers/1.jpg',
+                    topic: 'The Importance of Learning',
+                    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
+                    link: {
+                        fb: 'facebook.com',
+                        x: 'x.com',
+                        in: 'linkedin.com',
+                        ig: ''
+                    }
+                },
+                {
+                    name: 'Adora Nwodo', title: 'Senior Software Engineer', img: './src/assets/images/speakers/3.jpg',
+                    topic: 'This is Life',
+                    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
+                    link: {
+                        fb: '',
+                        x: 'x.com',
+                        in: 'linkedin.com',
+                        ig: ''
+                    }
+                },
             ],
             selectedSpeaker: null
         };

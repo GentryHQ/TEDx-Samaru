@@ -10,7 +10,7 @@
   class="mySwiper"
  >
   <swiper-slide v-for="(image_src, index) in images" :key="index">
-   <img :src="image_src" :alt="'carousel-image-' + index" />
+   <img :src="image_src" :alt="'carousel-image-' + index" width="200px" height="300px" />
   </swiper-slide>
  </swiper>
 </template>

@@ -1,5 +1,5 @@
 <script setup>
-import MarqueeComp from "../components/MarqueeComp.vue";
+// import MarqueeComp from "../components/MarqueeComp.vue";
 import FaqComp from "../components/FaqComp.vue";
 import ButtonComp from "../components/ButtonComp.vue";
 import SpeakerComp from "../components/SpeakerComp.vue";
@@ -10,18 +10,24 @@ import SpeakerComp from "../components/SpeakerComp.vue";
   <main>
     <div class="hero">
       <div class="container">
-        <h1><span>ReInvent</span> Your Perspectives and Methodologies </h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reiciendis tenetur porro.</p>
-        <ButtonComp>Register</ButtonComp>
+        <h1><span>ReInvent</span> your Perspectives, Challenge the Status Quo. </h1>
+        <p class="section-subhead">It’s not just ideas that change the world, but the audacity to challenge them.</p>
+        <div class="desktop">
+          <ButtonComp>Subscribe to newsletter</ButtonComp>
+        </div>
+        <div class="mobile">
+          <ButtonComp>Subscribe Now</ButtonComp>
+        </div>
       </div>
-      <MarqueeComp :class="marc" />
+      <!-- <MarqueeComp :class="marc" /> -->
     </div>
 
 
 
     <div class="community">
       <div class="container">
-        <h2>Take a glimpse view of <span>Samaru</span> community</h2>
+        <h2 class="section-subhead">Take a glimpse view of <span>Samaru</span> community</h2>
+        <p>It’s not just ideas that change the world, but the audacity to challenge them.</p>
         <div class="vidWrapper">
           <iframe class="video" src="https://www.youtube-nocookie.com/embed/20adDr7Felw?si=Wg9whmsmC_gA9Ntx"
             title="YouTube video player" frameborder="0"
@@ -48,7 +54,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
       </div>
     </div>
 
-    <section class="sponsors">
+    <!-- <section class="sponsors">
       <div class="container">
         <div class="sponsors-wrapper">
           <div class="words">
@@ -83,20 +89,15 @@ import SpeakerComp from "../components/SpeakerComp.vue";
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
+    <div>
+
+    </div>
 
     <div class="faq">
       <div class="container">
         <FaqComp />
-      </div>
-    </div>
-
-    <div class="endNote">
-      <div class="container">
-        <h2>Will you be there?</h2>
-        <p>We are looking forward to Reserving a seat for you</p>
-        <ButtonComp class="btn">I will be there</ButtonComp>
       </div>
     </div>
   </main>
@@ -107,6 +108,13 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 @use '../assets/css/variables' as v;
 @use '../assets/css/mixin' as m;
 
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
 
 .hero {
   position: relative;
@@ -168,7 +176,8 @@ import SpeakerComp from "../components/SpeakerComp.vue";
       v.$red,
       v.$red,
       v.$White,
-      v.$White )
+      v.$White,
+      v.$black, )
   }
 }
 
@@ -242,18 +251,8 @@ import SpeakerComp from "../components/SpeakerComp.vue";
   margin-block: 5rem;
 }
 
-.endNote {
-  background-color: v.$primary-50;
-  padding-block: 5rem;
-  text-align: center;
-
-  p {
-    margin-block: 20px 48px;
-  }
-
-  a {
-    text-transform: uppercase;
-  }
+.section-subhead {
+  margin-bottom: 32px;
 }
 
 @media screen and (max-width: 500px) {
@@ -264,6 +263,14 @@ import SpeakerComp from "../components/SpeakerComp.vue";
       flex-direction: column;
       gap: 32px;
     }
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
   }
 
 }
