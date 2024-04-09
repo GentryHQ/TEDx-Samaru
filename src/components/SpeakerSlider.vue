@@ -13,11 +13,14 @@
 
   <div class="speaker-slider">
     <swiper ref="swiper" :slidesPerView="1" :spaceBetween="20" :rewind="true" :freeMode="true" :mousewheel="true"
-    :centeredSlides="false" 
-    :pagination="{
+      :centeredSlides="false" 
+      :pagination="{
       clickable: true,
-    }" 
-    :navigation="true" :breakpoints="{
+    }" :navigation="true" 
+    :autoplay="{
+      disableOnInteraction: false,
+    }"
+    :breakpoints="{
       '640': {
         slidesPerView: 1,
         spaceBetween: 0,
@@ -76,12 +79,7 @@ export default {
 }
 
 .swiper-slide {
-  padding: 0px 10px 10px 0px;
-  // margin-inline-start: 10px;
-
-  // &:last-child {
-  //   margin-inline-start: -10px;
-  // }
+  padding: 0px 10px 50px 0px;
 }
 
 .speaker {
@@ -127,7 +125,7 @@ export default {
 
   @media screen and (max-width: 650px) {
     .swiper-slide {
-      padding: 12px;
+      padding: 0px 10px 70px 0px;
       margin-inline-start: 0px;
     }
   }

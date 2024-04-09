@@ -2,6 +2,7 @@
  <main>
   <div class="hero">
    <div class="container">
+    <img class="experience" src="../assets/images/about-page/experience.png"/>
     <h1>Where <span> Ideas </span> come to life</h1>
    </div>
   </div>
@@ -81,7 +82,7 @@
      <WhyAttendCard
       :iconSrc="'/src/assets/images/about-page/microphone-icon.svg'"
       title="Inspiring Talks and Performances:"
-      description="You'll have the opportunity to hear from a diverse lineup of speakers and performers who will share their unique ideas, stories, and talents. From thought-provoking talks to captivating performances, each presentation is designed to inspire, educate, and entertain."
+      description="You'll have the opportunity to hear from a diverse lineup of speakers and performers who will share their unique ideas, stories, and talents. From thought-provoking talks to captivating performances, each presentation is designed to inspire, educate, and entertain. This rich exchange of ideas can spark your creativity and open up new ways of thinking."
       :link="{ name: 'home' }"
       buttonText="Register Now"
      ></WhyAttendCard>
@@ -96,18 +97,17 @@
     </div>
     <div class="why-attend-section-wrapper">
      <!-- <SpeakerComp :isSlider="false"></SpeakerComp> -->
-
      <WhyAttendCard
-      :iconSrc="'/src/assets/images/about-page/microphone-icon.svg'"
-      title="Inspiring Talks and Performances:"
-      description="You'll have the opportunity to hear from a diverse lineup of speakers and performers who will share their unique ideas, stories, and talents. From thought-provoking talks to captivating performances, each presentation is designed to inspire, educate, and entertain."
+      :iconSrc="'/src/assets/images/about-page/stack-icon.svg'"
+      title="Inspiration to Act:"
+      description="Many attendees leave TEDx events feeling motivated and empowered to make a difference in their communities or in their personal or professional lives. The stories of innovation, overcoming challenges, and creative thinking can serve as a powerful catalyst for action. The inspiration from TEDx Samaru can be the driving force you need to change your life."
       :link="{ name: 'home' }"
       buttonText="Register Now"
      ></WhyAttendCard>
      <WhyAttendCard
-      :iconSrc="'/src/assets/images/about-page/stack-icon.svg'"
-      title="Personal Growth and Development:"
-      description="By attending TEDx Samaru, you'll have the chance to expand your horizons, challenge your assumptions, and broaden your perspective on a wide range of topics. Whether you're interested in technology, entertainment, design, or social issues, you'll find something at TEDx Samaru that will stretch your mind and inspire new ways of thinking."
+      :iconSrc="'/src/assets/images/about-page/microphone-icon.svg'"
+      title="Networking Opportunities:"
+      description="Attending TEDx Samaru allows you to connect with like-minded individuals who are also eager to learn and engage with new ideas. The event provides a platform for attendees to meet, discuss their interests and experiences, and potentially collaborate on future projects. This networking can be incredibly valuable for professional and personal growth."
       :link="{ name: 'home' }"
       buttonText="Register Now"
      ></WhyAttendCard>
@@ -169,15 +169,6 @@
     <FaqComp />
    </div>
   </div>
-
-  <div class="will-you-be-there-section">
-   <div class="container">
-    <h2>Will You Be There</h2>
-    <p>We are looking forward to Reserving a seat for you</p>
-
-    <ButtonComp class="btn">I Will Be There</ButtonComp>
-   </div>
-  </div>
  </main>
 </template>
 
@@ -192,6 +183,10 @@ import ButtonComp from '../components/ButtonComp.vue'
 <style lang="scss" scoped>
 @use '../assets/css/variables' as v;
 @use '../assets/css/mixin' as m;
+
+.experience {
+  margin-bottom: 20px;
+}
 
 .hero {
  position: relative;
@@ -237,11 +232,18 @@ import ButtonComp from '../components/ButtonComp.vue'
 
  .btn {
   // This mixin is for button, see in css/mixin.scss
-  @include m.btn(v.$White, v.$black, v.$red, v.$red, v.$White, v.$White);
+  @include m.btn(v.$White, v.$black, v.$red, v.$red, v.$White, v.$White, v.$black);
  }
 
  p {
   color: v.$black;
+  font-size: 18px;
+  font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'ss10' on, 'ss09' on, 'ss08' on, 'ss07' on, 'ss06' on, 'ss05' on, 'ss04' on, 'ss03' on, 'ss02' on;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
  }
  .words {
   h2 {
@@ -422,6 +424,7 @@ import ButtonComp from '../components/ButtonComp.vue'
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   align-items: start;
   justify-content: space-between;
+  margin-bottom: 68px;
  }
 }
 @media screen and (max-width: 768px) {

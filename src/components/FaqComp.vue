@@ -1,8 +1,9 @@
 <template>
-    <div class="wrapper">
+    <div class="wrapper-faq">
         <h2>Lets <span>answer</span> some of your burning questions</h2>
         <p class="txt">Everything you need to know about TEDxSamaru Event</p>
 
+        <div class="faq-container">
         <div class="faq" v-for="(faq, index) in faqs" :key="faq.index" @click="toggleFaq(index)"
             :class="{ active: faq.open }">
             <div class="faq_parent">
@@ -21,15 +22,6 @@
                 </transition>
             </div>
         </div>
-
-        <div class="faq_footer">
-            <div class="img">
-
-            </div>
-
-            <h5>Still have questions?</h5>
-            <p>Can’t find the answer you’re looking for? Please chat to our friendly team.</p>
-            <router-link :to="{name: 'home'}" class="btn" >GET IN TOUCH</router-link>
         </div>
     </div>
 </template>
@@ -39,12 +31,11 @@ export default {
     data() {
         return {
             faqs: [
-                { question: 'What is TEDxSamaru?', answer: "TEDxSamaru is an independently organized event in the spirit of TED Talks. Our mission is to bring ideas worth spreading from the north of Nigeria to the global stage.", open: false },
-                { question: 'When and where will TEDxSamaru take place?', answer: "It a p. event", open: false },
-                { question: 'What is the theme of TEDxSamaru?', answer: "It is an event", open: false },
-                { question: 'How can I get tickets to TEDxSamaru?', answer: "It is an event", open: false },
-                { question: 'What is the eligibility criteria to attend TEDxSamaru?', answer: "It is an event", open: false },
-                { question: 'Will the event be livestreamed?', answer: "It is an event", open: false },
+                { question: 'What is TEDxSamaru?', answer: "TEDxSamaru is an independently organized event in the spirit of TED Talks. Our mission is to bring ideas worth spreading from the north of Nigeria to the global stage. Through inspiring talks, performances, and immersive experiences, we spark conversations that challenge conventional thinking.", open: false },
+                { question: 'Who are the speakers?', answer: "Our speakers are trailblazers, visionaries and local heroes who have dared to reinvent across diverse fields like technology, business, science, art, and social impact. From award-winning innovators to activists reshaping norms, they take the iconic red circle to share their bold journeys of reinvention.", open: false },
+                { question: 'How can I attend?', answer: "Tickets for the main TedX Samaru event go on sale annually. However, we offer a variety of other experiences year-round like webinars, workshops and community meetups. Sign up for our newsletter to stay updated.", open: false },
+                { question: 'How can I get involved or sponsor?', answer: "There are multiple ways to join our reinvention revolution as a partner, volunteer or sponsor. Visit our Sponsorship page to explore the various opportunities and benefits of associating with our movement.", open: false },
+                { question: 'When and where will TEDxSamaru take place?', answer: "To be announced soon", open: false },
             ]
         }
     },
@@ -70,12 +61,24 @@ export default {
     opacity: 0;
 }
 
-.wrapper {
+.wrapper-faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
     h2 {
         text-align: center;
         max-inline-size: 35.5rem;
         margin-inline: auto;
         padding-block-end: 1.25rem;
+        color: #000;
+        font-feature-settings: 'ss10' on, 'ss09' on, 'ss08' on, 'ss07' on, 'ss06' on, 'ss05' on;
+        font-family: Inter;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
     }
 
    .txt {
@@ -83,10 +86,18 @@ export default {
     }
 }
 
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 48px;
+}
+
 .faq {
     max-inline-size: 48rem;
     margin-inline: auto;
-
+    width: 100%;
 
     &.active {
 
@@ -101,10 +112,20 @@ export default {
         margin-block-start: 3rem;
     }
 
-    &_answer,
     &_question {
         border-radius: v.$br1;
         margin-block-start: 10px;
+    }
+
+    &_answer {
+        border-radius: v.$br1;
+        margin-block-start: 10px;
+        color: #475467;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; 
     }
 
 
@@ -141,33 +162,11 @@ export default {
         text-align: left;
         transition: all .5s ease;
     }
+}
 
-    &_footer {
-        margin-block-start: 3rem;
-        background-color: v.$black;
-        padding: 2.625rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: v.$White;
-        border-radius: 24px;
-
-        h5 {
-            font-size: 1.25rem;
-            font-weight: v.$fw5;
-            margin-block-end: 0.5rem;
-        }
-
-        p {
-            font-size: 1.125rem;
-            margin-block-end: 1.25rem;
-        }
-
-        .btn {
-            background-color: v.$White;
-            color: v.$red;
-            padding: 20px 32px;
-        }
+@media screen and (max-width: 768px) {
+    .wrapper-faq > h2 {
+        font-size: 24px;
     }
 }
 </style>

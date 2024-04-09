@@ -7,40 +7,90 @@ nav {
     justify-content: space-between;
     align-items: center;
     color: v.$black;
+    position: relative;
+    z-index: 999;
 
     .links {
         display: flex;
         gap: 18px;
         align-items: center;
+        flex-direction: row;
 
         .cta {
             margin-inline-start: 0.5rem;
         }
 
         a {
-            color: #ffffffb6;
+            color: black;
             transition: color .3s ease-in-out;
             position: relative;
-    
+
             &:hover {
-                color: v.$White;
+                color: v.$primary-400;
             }
-    
-    
+
+
         }
-    
+
         a.router-link-exact-active:not(:last-child) {
-            color: v.$White;
-    
+            color: v.$primary-500;
+
             &::before {
                 content: '';
                 position: absolute;
                 bottom: -10px;
                 left: 50%;
-                background-color: v.$White;
+                background-color: v.$primary-500;
                 height: 2px;
                 width: 30px;
                 transform: translateX(-50%);
+            }
+        }
+
+
+    }
+
+    .toggle {
+        span {
+            height: 2px;
+            width: 2px;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+
+        .links {
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.97);
+            padding: 20px;
+            position: absolute;
+            top: 80px;
+            right: 0;
+            left: 0;
+            border-radius: 8px;
+
+            a {
+                color: v.$White;
+
+                &:hover {
+                    color: v.$primary-400;
+                }
+
+            }
+
+            a.router-link-exact-active:not(:last-child) {
+                color: v.$primary-500;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    background-color: v.$primary-500;
+                    height: 2px;
+                    width: 30px;
+                    transform: translateX(-50%);
+                }
             }
         }
     }
