@@ -196,6 +196,9 @@ import SpeakerComp from "../components/SpeakerComp.vue";
     }
 }
 
+.location-info-section {
+ padding-block: 5rem;
+ text-align: justify;
 
 .faqComp {
     margin-block: 5rem;
@@ -203,9 +206,9 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 
 // Media Query
 @media screen and (min-width: 1024px) {
-    .wrapper {
-        grid-template-columns: repeat(4, 1fr);
-    }
+ .wrapper {
+  grid-template-columns: repeat(4, 1fr);
+ }
 }
 
 @media screen and (max-width: 768px) {

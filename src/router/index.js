@@ -4,6 +4,7 @@ import Speakers from '../views/SpeakersView.vue';
 import Sponsors from '../views/SponsorsView.vue';
 import About from '../views/AboutView.vue';
 import Register from '../views/RegisterView.vue';
+import Contact from '../views/ContactView.vue';
 import NotFound from "../views/NotFound.vue";
 
 
@@ -34,6 +35,11 @@ const router = createRouter({
       path: '/register',
       name: 'register',
       component: Register
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact
     },
     // catchall 404
     {
