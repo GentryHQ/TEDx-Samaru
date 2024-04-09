@@ -44,16 +44,16 @@
         <ButtonComp />
     </div>
 
-    <div class="faqComp">
+    <!-- <div class="faqComp">
         <div class="container">
             <FaqComp />
         </div>
-    </div>
+    </div> -->
 </template>
 
 
 <script setup>
-import FaqComp from "@/components/FaqComp.vue";
+// import FaqComp from "@/components/FaqComp.vue";
 import ButtonComp from "../components/ButtonComp.vue";
 import SpeakerComp from "../components/SpeakerComp.vue";
 </script>
@@ -188,6 +188,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         align-items: start;
         justify-content: space-between;
+        margin-bottom: 68px;
     }
 
     a {
