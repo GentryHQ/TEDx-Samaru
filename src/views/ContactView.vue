@@ -68,9 +68,6 @@
    </div>
   </div>
   <div class="faq">
-   <div class="container">
-    <FaqComp />
-   </div>
   </div>
  </div>
 </template>
@@ -79,7 +76,6 @@
 import { reactive, ref } from 'vue'
 import FormInput from '../components/form-inputs/Input.vue'
 import ButtonComp from '../components/ButtonComp.vue'
-import FaqComp from '../components/FaqComp.vue'
 
 const form = reactive({
  firstName: '',
