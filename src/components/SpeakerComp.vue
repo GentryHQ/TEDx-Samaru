@@ -33,7 +33,7 @@ export default {
         return {
             speakers: [
                 {
-                    name: 'Bello Gbadebo', title: 'CEO Dev Club', img: './src/assets/images/speakers/1.jpg',
+                    name: 'Bello Gbadebo', title: 'CEO Dev Club', img: '/images/speakers/1.jpg',
                     topic: 'The Importance of research',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -44,7 +44,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Adora Nwodo', title: 'Senior Software Engineer', img: './src/assets/images/speakers/2.jpg',
+                    name: 'Adora Nwodo', title: 'Senior Software Engineer', img: '/images/speakers/2.jpg',
                     topic: 'Sucess Key',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -55,7 +55,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Adora Nwodo', title: 'Senior Software Engineer', img: './src/assets/images/speakers/3.jpg',
+                    name: 'Adora Nwodo', title: 'Senior Software Engineer', img: '/images/speakers/3.jpg',
                     topic: 'This is Life',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -66,7 +66,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Aniedi Udo-Obong', title: 'Developer Relations Engineer at Postman', img: './src/assets/images/speakers/1.jpg',
+                    name: 'Aniedi Udo-Obong', title: 'Developer Relations Engineer at Postman', img: '/images/speakers/1.jpg',
                     topic: 'Love is an Illusion',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -77,7 +77,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Karen Chukwu', title: 'Founder/Managing Partner (Katwig & Dale)', img: './src/assets/images/speakers/1.jpg',
+                    name: 'Karen Chukwu', title: 'Founder/Managing Partner (Katwig & Dale)', img: '/images/speakers/1.jpg',
                     topic: 'The Importance of Learning',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -88,7 +88,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Karen Chukwu', title: 'Founder/Managing Partner (Katwig & Dale)', img: './src/assets/images/speakers/1.jpg',
+                    name: 'Karen Chukwu', title: 'Founder/Managing Partner (Katwig & Dale)', img: '/images/speakers/1.jpg',
                     topic: 'The Importance of Learning',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -99,7 +99,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Karen Chukwu', title: 'Founder/Managing Partner (Katwig & Dale)', img: './src/assets/images/speakers/1.jpg',
+                    name: 'Karen Chukwu', title: 'Founder/Managing Partner (Katwig & Dale)', img: '/images/speakers/1.jpg',
                     topic: 'The Importance of Learning',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -110,7 +110,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Karen Chukwu', title: 'Founder/Managing Partner (Katwig & Dale)', img: './src/assets/images/speakers/1.jpg',
+                    name: 'Karen Chukwu', title: 'Founder/Managing Partner (Katwig & Dale)', img: '/images/speakers/1.jpg',
                     topic: 'The Importance of Learning',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -121,7 +121,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Adora Nwodo', title: 'Senior Software Engineer', img: './src/assets/images/speakers/3.jpg',
+                    name: 'Adora Nwodo', title: 'Senior Software Engineer', img: '/images/speakers/3.jpg',
                     topic: 'This is Life',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
