@@ -64,7 +64,6 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 @use '../assets/css/mixin' as m;
 
 .speaker {
-
     h1 {
         max-inline-size: 940px;
         text-align: center;
