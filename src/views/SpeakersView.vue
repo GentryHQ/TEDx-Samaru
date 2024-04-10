@@ -6,13 +6,13 @@
 
             <div class="img_box">
                 <div class="first box">
-                    <img src="@/assets/images/ted-speaker.png" alt="Ted speaker on stage speaking to people">
+                    <img src="/images/ted-speaker.png" alt="Ted speaker on stage speaking to people">
                 </div>
                 <div class="second box">
-                    <img src="@/assets/images/tedxMark.png" alt="Tedx write up">
+                    <img src="/images/tedxMark.png" alt="Tedx write up">
                 </div>
                 <div class="third box">
-                    <img src="@/assets/images/tedx speaker.jpeg"
+                    <img src="/images/tedx speaker.jpeg"
                         alt="Ted speaker facing the audience on stage speaking to people">
                 </div>
             </div>
@@ -29,7 +29,7 @@
             </div>
 
             <div class="col2 col">
-                <img src="@/assets/images/venue.png"
+                <img src="/images/venue.png"
                     alt="Venue for TedxSamaru, Centre of excellence Ahmadu Bello University, Zaria">
                 <h5>We will be at the <span>Centre of excellence Ahmadu Bello University, Zaria.</span></h5>
             </div>
