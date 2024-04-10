@@ -4,17 +4,6 @@ import ButtonComp from "../components/ButtonComp.vue";
 </script>
 <template>
  <div class="footer">
-    <div class="faq_footer">
-        <div class="img">
-            <img class="first-icon" src="../assets/images/Avatar2.png" alt="Avatar2">
-            <img class="middle-icon" src="../assets/images/Avatar1.png" alt="Avatar1">
-            <img class="last-icon" src="../assets/images/Avatar3.png" alt="Avatar3">
-        </div>
-
-        <h5>Still have questions?</h5>
-        <p>Can’t find the answer you’re looking for? Please chat to our friendly team.</p>
-        <router-link :to="{name: 'contact'}" class="btn" >GET IN TOUCH</router-link>
-    </div>
     <div class="endNote">
       <div class="container">
         <h2>Will you be there?</h2>
@@ -202,88 +191,6 @@ import ButtonComp from "../components/ButtonComp.vue";
             width: 300px;
             padding-left: 10px;
         }
-    }
-}
-
-.faq_footer {
-    margin-block-start: 3rem;
-    background-color: v.$black;
-    padding: 2.625rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: v.$White;
-    // border-radius: 24px;
-    width: 90%;
-
-    h5 {
-        font-size: 1.25rem;
-        font-weight: v.$fw5;
-        margin-block-end: 0.5rem;
-        text-align: center;
-    }
-
-    p {
-        font-size: 1.125rem;
-        margin-block-end: 1.25rem;
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    .img {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 24px;
-        width: 120px;
-        height: 56px;
-        align-items: center;
-
-        .first-icon {
-            position: absolute;
-            flex-direction: column;
-            justify-content: center;
-            flex-shrink: 0;
-            right: 1px;
-        }
-        .middle-icon {
-            position: absolute;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            z-index: 3;
-            width: 60px;
-            height: 60px;
-        }
-        .last-icon {
-            display: flex;
-            position: absolute;
-            flex-direction: column;
-            justify-content: center;
-            flex-shrink: 0;
-            left: 3px;
-        }
-    }
-
-    .btn {
-        background-color: v.$White;
-        color: v.$red;
-        padding: 20px 32px;
-        text-decoration-line: underline;
-        text-align: center;
-        font-family: Inter;
-        font-size: 20px;
-        font-style: normal;
-        text-underline-offset: 3px;
-        // text-decoration-skip-ink: none; 
-        font-weight: 700;
-        line-height: 24px; 
-    }
-
-    .btn:hover {
-        color: v.$White;
-        background-color: v.$red;
     }
 }
 
