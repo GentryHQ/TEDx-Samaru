@@ -36,6 +36,34 @@ import SpeakerComp from "../components/SpeakerComp.vue";
         </div>
       </div>
     </div>
+    <div class="about">
+      <div class="imgs">
+        <img src="../assets/images/collaborate.png" alt="ted-banner" />
+      </div>
+      <div class="words">
+        <h2><span> Collaborate </span> as a team with a shared goal</h2>
+        <p>
+          A collaborative samaru community that has leaders that align their actions beyond the status quo, have amazing foresight, create positive change, and have built on ideas that is helping samaru adapt into the future for the better.
+        </p>
+        <div style="width: fit-content">
+        <router-link :to="{ name: 'about' }" class="nBtn">
+          Read more
+          <svg
+          width="25"
+          height="24"
+          viewBox="0 0 25 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          >
+          <path
+            d="M5.5 18.478L17.4779 6.50002L8.63909 6.50002L8.63909 5.00002L20.0386 5.00002L20.0386 16.3995H18.5386V7.56068L6.56066 19.5386L5.5 18.478Z"
+            fill="#EB0028"
+          />
+          </svg>
+        </router-link>
+        </div>
+      </div>
+    </div>
 
     <div class="speaker">
       <div class="container">
@@ -262,6 +290,83 @@ import SpeakerComp from "../components/SpeakerComp.vue";
   margin-bottom: 32px;
 }
 
+.about {
+  display: flex;
+  width: 100%;
+  padding: 80px;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .imgs {
+   flex-basis: 40%;
+   min-width: 400px;
+   margin: auto;
+  }
+
+  .words {
+   flex-basis: 60%;
+   display: flex;
+    padding: 80px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+
+    h2 {
+      color: #000;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -2.4px;
+      margin-bottom: 20px;
+
+      span {
+        color: v.$primary-500;
+      }
+    }
+
+    p {
+      color: #000;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 25.6px */
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .about {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 30px;
+
+  .words {
+   flex-basis: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   align-items: center;
+   margin-bottom: 4rem;
+   width: 100%;
+   padding: 0;
+
+   h2, p {
+    text-align: center;
+   }
+  }
+
+  .imgs {
+    // display: none;
+    min-width: 80%;
+  }
+ }
+
+}
+
 @media screen and (max-width: 500px) {
   .sponsors {
 
@@ -279,6 +384,5 @@ import SpeakerComp from "../components/SpeakerComp.vue";
   .mobile {
     display: block;
   }
-
 }
 </style>
