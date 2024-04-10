@@ -261,5 +261,12 @@ export default {
     .wrapper-faq > h2 {
         font-size: 24px;
     }
+
+    .faq_footer {
+        border-radius: 16px;
+        .btn {
+            font-size: 16px;
+        }
+    }
 }
 </style>

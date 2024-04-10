@@ -26,17 +26,17 @@ import ButtonComp from "../components/ButtonComp.vue";
         <div class="footer-2">
             <img class="logo" src="../assets/images/footer/footer_logo.png" alt="TedX Logo">
             <div class="footer-2-section">
-                <a href="/about">ABOUT</a>
-                <a href="/speakers">SPEAKERS</a>
-                <a href="/#faq">FAQ</a>
+                <router-link :to="{ name: 'about' }">ABOUT</router-link>
+                <router-link :to="{ name: 'speakers' }">SPEAKERS</router-link>
+                <router-link :to="{ name: 'sponsors', hash: '#faq' }">FAQ</router-link>
             </div>
             <div class="footer-2-section">
-                <a href="">JOIN THE COMMUNITY</a>
-                <a href="/sponsors">SPONSORS AND PARTNERS</a>
+                <router-link :to="{ name: '' }">JOIN THE COMMUNITY</router-link>
+                <router-link :to="{ name: 'sponsors' }">SPONSORS AND PARTNERS</router-link>
             </div>
             <div class="footer-2-section">
-                <a href="">PRIVACY POLICY</a>
-                <a href="/contact">CONTACT US</a>
+                <router-link :to="{ name: '' }" >PRIVACY POLICY</router-link>
+                <router-link :to="{ name: 'contact' }">CONTACT US</router-link>
                 <div class="socials">
                     <p>Follow us on</p>
                     <div class="social-links">
@@ -254,12 +254,6 @@ import ButtonComp from "../components/ButtonComp.vue";
        margin-bottom: 32px;
     }
 
-    .faq_footer {
-        border-radius: 16px;
-        .btn {
-            font-size: 16px;
-        }
-    }
     .btn {
         font-size: 16px;
     }
