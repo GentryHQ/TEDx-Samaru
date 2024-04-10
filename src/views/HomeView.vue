@@ -360,8 +360,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
   }
 
   .imgs {
-    // display: none;
-    min-width: 80%;
+    min-width: auto;
   }
  }
 
