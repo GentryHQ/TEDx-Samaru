@@ -50,7 +50,7 @@
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Booth Space'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon5.png'"
+      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon5.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Logo placement on speaker videos'"
