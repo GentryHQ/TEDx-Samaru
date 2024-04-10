@@ -37,17 +37,17 @@ import ButtonComp from "../components/ButtonComp.vue";
         <div class="footer-2">
             <img class="logo" src="../assets/images/footer/footer_logo.png" alt="TedX Logo">
             <div class="footer-2-section">
-                <a href="">ABOUT</a>
-                <a href="">SPEAKERS</a>
-                <a href="">FAQ</a>
+                <a href="/about">ABOUT</a>
+                <a href="/speakers">SPEAKERS</a>
+                <a href="/#faq">FAQ</a>
             </div>
             <div class="footer-2-section">
                 <a href="">JOIN THE COMMUNITY</a>
-                <a href="">SPONSORS AND PARTNERS</a>
+                <a href="/sponsors">SPONSORS AND PARTNERS</a>
             </div>
             <div class="footer-2-section">
                 <a href="">PRIVACY POLICY</a>
-                <a href="">CONTACT US</a>
+                <a href="/contact">CONTACT US</a>
                 <div class="socials">
                     <p>Follow us on</p>
                     <div class="social-links">

@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper-faq">
+    <div class="wrapper-faq" id="faq">
         <h2>Lets <span>answer</span> some of your burning questions</h2>
         <p class="txt">Everything you need to know about TEDxSamaru Event</p>
 

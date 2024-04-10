@@ -34,19 +34,19 @@
     <div class="perks-card-wrapper">
      <SponsorshipPerkCard
       :text="'Stage Recognition'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon1.png'"
+      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon1.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Partner Ticket'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon2.png'"
+      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon2.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Logo placement on conference Website and Landing Pages'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon3.png'"
+      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon3.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Logo placement on digital materials '"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon4.png'"
+      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon4.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Booth Space'"
@@ -54,19 +54,19 @@
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Logo placement on speaker videos'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon6.png'"
+      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon6.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Promotional materials in confrence souvenir'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon7.png'"
+      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon7.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Customized Breakout session'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon8.png'"
+      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon8.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
       :text="'Activation & Lots more'"
-      :icon-src="'/src/assets/images/sponsors-page/perk-cards-icons/Icon9.png'"
+      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon9.png'"
      ></SponsorshipPerkCard>
     </div>
 
