@@ -268,5 +268,16 @@ export default {
             font-size: 16px;
         }
     }
+
+    .faq_question {
+        h4 {
+            font-size: 18px;
+        }
+    }
+    .faq_answer {
+        p {
+            font-size: 16px;
+        }
+    }
 }
 </style>
