@@ -181,6 +181,10 @@ import SpeakerComp from "../components/SpeakerComp.vue";
         padding-block-end: 1.25rem;
     }
 
+    p {
+        padding-block-end: 1.25rem;
+    }
+
     .container {
         margin-block-start: 1.75rem;
         display: grid;

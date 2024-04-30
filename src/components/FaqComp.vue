@@ -42,11 +42,11 @@ export default {
     data() {
         return {
             faqs: [
-                { question: 'What is TEDxSamaru?', answer: "TEDxSamaru is an independently organized event in the spirit of TED Talks. Our mission is to bring ideas worth spreading from the north of Nigeria to the global stage. Through inspiring talks, performances, and immersive experiences, we spark conversations that challenge conventional thinking.", open: false },
+                { question: 'What is TEDxSamaru?', answer: "TEDxSamaru is an independently organized event that brings together brilliant minds to share powerful ideas around an annual theme - this year's being 'Reinvent'. Through inspiring conversations, performances and immersive experiences, we drive narratives that challenge conventional thinking.", open: false },
                 { question: 'Who are the speakers?', answer: "Our speakers are trailblazers, visionaries and local heroes who have dared to reinvent across diverse fields like technology, business, science, art, and social impact. From award-winning innovators to activists reshaping norms, they take the iconic red circle to share their bold journeys of reinvention.", open: false },
-                { question: 'How can I attend?', answer: "Tickets for the main TedX Samaru event go on sale annually. However, we offer a variety of other experiences year-round like webinars, workshops and community meetups. Sign up for our newsletter to stay updated.", open: false },
-                { question: 'How can I get involved or sponsor?', answer: "There are multiple ways to join our reinvention revolution as a partner, volunteer or sponsor. Visit our Sponsorship page to explore the various opportunities and benefits of associating with our movement.", open: false },
-                { question: 'When and where will TEDxSamaru take place?', answer: "To be announced soon", open: false },
+                { question: 'How can I attend?', answer: "Tickets for the main TedX Samaru event go on sale annually. However, we offer a variety of other experiences year-round like webinars, workshops and community meetups. Do sign up for our newsletter to stay updated.", open: false },
+                { question: 'How can I get involved or sponsor?', answer: "There are a couple of ways to join the reinvention revolution, and you can do that as a partner, volunteer or sponsor. Visit our Sponsorship page to explore the various opportunities and benefits of supporting TEDx Samaru.", open: false },
+                { question: 'When and where will TEDxSamaru take place?', answer: "10th, AUGUST 2024", open: false },
             ]
         }
     },

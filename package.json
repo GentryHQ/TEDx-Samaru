@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "swiper": "^11.0.7",
+    "vee-validate": "^4.5.8",
     "vue": "^3.4.15",
     "vue-native-dialog": "^0.0.3",
     "vue-router": "^4.2.5"

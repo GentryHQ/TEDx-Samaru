@@ -122,7 +122,7 @@
      ideas and their potential to make a difference.
     </p>
     <div class="organizing-team-wrapper">
-     <SpeakerComp :isSlider="false"></SpeakerComp>
+     <TeamComp :isSlider="false"></TeamComp>
     </div>
     <ButtonComp class="btn">Register</ButtonComp>
    </div>
@@ -174,7 +174,7 @@
 
 <script setup>
 import FaqComp from '../components/FaqComp.vue'
-import SpeakerComp from '../components/SpeakerComp.vue'
+import TeamComp from '../components/TeamComp.vue'
 import AboutSlides from '@/components/AboutSlides.vue'
 import WhyAttendCard from '@/components/WhyAttendCard.vue'
 import ButtonComp from '../components/ButtonComp.vue'

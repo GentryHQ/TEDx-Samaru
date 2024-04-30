@@ -11,7 +11,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
     <div class="hero">
       <div class="container">
         <h1><span>ReInvent</span> your Perspectives, Challenge the Status Quo. </h1>
-        <p class="section-subhead">It’s not just ideas that change the world, but the audacity to challenge them.</p>
+        <p class="section-subhead">It’s not just ideas that change the world, but the audacity to bring them to life.</p>
         <div class="desktop">
           <ButtonComp route-name="" hash="#newsletter" >Subscribe to newsletter</ButtonComp>
         </div>
@@ -27,9 +27,10 @@ import SpeakerComp from "../components/SpeakerComp.vue";
     <div class="community">
       <div class="container">
         <h2 class="section-subhead">Take a glimpse view of <span>Samaru</span> community</h2>
-        <p>It’s not just ideas that change the world, but the audacity to challenge them.</p>
+        <p>In everyone of us lies the power to do great things from small places.</p>
         <div class="vidWrapper">
-          <iframe class="video" src="https://www.youtube-nocookie.com/embed/20adDr7Felw?si=Wg9whmsmC_gA9Ntx"
+          <!-- https://www.youtube-nocookie.com/embed/20adDr7Felw?si=Wg9whmsmC_gA9Ntx -->
+          <iframe class="video" src="https://www.youtube-nocookie.com/embed/oY_W_uQATng?si=FaVzwcV1mk15d_ex"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -41,9 +42,9 @@ import SpeakerComp from "../components/SpeakerComp.vue";
         <img src="../assets/images/collaborate.png" alt="ted-banner" />
       </div>
       <div class="words">
-        <h2><span> Collaborate </span> as a team with a shared goal</h2>
+        <h2><span>A collaborative </span> community of changemakers</h2>
         <p>
-          A collaborative samaru community that has leaders that align their actions beyond the status quo, have amazing foresight, create positive change, and have built on ideas that is helping samaru adapt into the future for the better.
+          A collaborative samaru community that has leaders who align their actions beyond the status quo, have amazing foresight, create positive change, and have built on ideas that is helping samaru adapt better for the future.
         </p>
         <div style="width: fit-content">
         <router-link :to="{ name: 'about' }" class="nBtn">
@@ -68,6 +69,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
     <div class="speaker">
       <div class="container">
         <h2>Meet our <span>seasoned</span> speakers</h2>
+        <p class="announcement">To be announced soon</p>
         <div class="speaker-wrapper">
           <SpeakerComp :isSlider="true" />
           <router-link :to="{ name: 'speakers' }" class="nBtn">
@@ -143,6 +145,10 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 
 .mobile {
   display: none;
+}
+
+.announcement {
+  margin-top: 20px;
 }
 
 .hero {

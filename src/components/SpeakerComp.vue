@@ -162,6 +162,7 @@ export default {
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     width: 100%;
+    filter: blur(5px);
 
     &:hover,
     &:focus {
