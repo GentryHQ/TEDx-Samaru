@@ -23,7 +23,7 @@
         <div class="container">
             <div class="col1 col">
                 <h5>🥂One Day of Awesomeness</h5>
-                <h3><span>AUGUST</span>10TH, 2024</h3>
+                <h3><span>AUGUST</span>Coming Soon</h3>
                 <p>We will be making history, once again, with you</p>
                 <ButtonComp />
             </div>

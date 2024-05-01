@@ -58,7 +58,7 @@
          <label for="privacy">I agree to the Privacy Policy</label>
         </div>
         <div>
-         <ButtonComp class="submit-btn">Send Message</ButtonComp>
+         <ButtonComp class="submit-btn" @click="handleSubmit">Send Message</ButtonComp>
         </div>
        </form>
       </div>
@@ -73,18 +73,39 @@
 </template>
 
 <script setup>
-import { reactive, ref } from 'vue'
-import FormInput from '../components/form-inputs/Input.vue'
-import ButtonComp from '../components/ButtonComp.vue'
+import { reactive } from 'vue';
+import FormInput from '../components/form-inputs/Input.vue';
+import ButtonComp from '../components/ButtonComp.vue';
 
 const form = reactive({
- firstName: '',
- lastName: '',
- email: '',
- phoneNumber: '',
- message: '',
- agreedToPolicy: false
-})
+  firstName: '',
+  lastName: '',
+  email: '',
+  phoneNumber: '',
+  message: '',
+  agreedToPolicy: false
+});
+
+const handleSubmit = () => {
+  console.log('Button clicked');
+  sendEmail();
+};
+
+const sendEmail = () => {
+  import('https://smtpjs.com/v3/smtp.js').then((module) => {
+    module.default.send({
+      Host: 'smtp.elasticemail.com',
+      Username: 'username',
+      Password: 'password',
+      To: 'them@website.com',
+      From: 'you@isp.com',
+      Subject: 'This is the subject',
+      Body: 'And this is the body'
+    }).then(
+      (message) => alert(message)
+    );
+  });
+};
 </script>
 
 <style lang="scss" scoped>

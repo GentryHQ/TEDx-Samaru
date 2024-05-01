@@ -2,7 +2,7 @@
  <div>
   <div class="hero">
    <div class="words">
-    <h1>Become a Sponsor at <span> TedX Samaru </span></h1>
+    <h1>Become a Sponsor at <span> TEDx Samaru </span></h1>
     <p>
      Join a family of bold thinkers and revolutionary brands who are igniting change and
      reinvention.
@@ -79,8 +79,7 @@
    <div class="container">
     <h2>Why <span> Sponsor TEDx</span> Samaru?</h2>
     <p>
-     Don't just take our word for it – hear from past sponsors who have experienced the impact of
-     TEDx events firsthand.
+        As a sponsor, your brand would be strategically positioned to meet a percentage of your target audience - a healthy mixture of people who are familiar with your product and an introduction to a fresh market. A one way ticket to get your brand in the eyes of your desired consumers.
     </p>
     <div class="why-sponsor-tedx-section-wrapper">
      <div class="card">
@@ -152,7 +151,7 @@ span {
 }
 .hero {
  position: relative;
- min-height: 900px;
+ min-height: 100vh;
  background-image: url('../assets/images/sponsors-page/event-hall.png');
  background-position: center center;
  background-repeat: no-repeat;

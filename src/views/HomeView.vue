@@ -153,7 +153,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 
 .hero {
   position: relative;
-  min-height: 900px;
+  min-height: 100vh;
   background-image: url('../assets/images/Background.webp');
   background-position: center center;
   background-repeat: no-repeat;

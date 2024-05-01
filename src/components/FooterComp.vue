@@ -3,11 +3,7 @@
 import ButtonComp from "../components/ButtonComp.vue";
 const handleSubmit = () => {
   console.log('Button clicked');
-  // Add form submission logic here
-  // For example, you can submit the form using JavaScript:
   document.getElementById('mc-embedded-subscribe-form').submit();
-  // Or trigger a submit event if you're using Vue 3's Composition API:
-  // router.currentRoute.value.meta.handleSubmit();
 }
 </script>
 <template>
@@ -39,8 +35,9 @@ const handleSubmit = () => {
                 <router-link class="footer-text" :to="{ name: 'sponsors', hash: '#faq' }">FAQ</router-link>
             </div>
             <div class="footer-2-section">
-                <router-link class="footer-text" :to="{ name: '' }">JOIN THE COMMUNITY</router-link>
+                <a class="footer-text" href="https://chat.whatsapp.com/CQHk2nOcgdt7qJc7Tiiqum" target="_blank">JOIN THE COMMUNITY</a>
                 <router-link class="footer-text" :to="{ name: 'sponsors' }">SPONSORS AND PARTNERS</router-link>
+                <router-link class="footer-text" :to="{ name: 'about', hash: '#team' }">MEET THE CORE TEAM</router-link>
             </div>
             <div class="footer-2-section">
                 <router-link class="footer-text" :to="{ name: '' }" >PRIVACY POLICY</router-link>
@@ -51,8 +48,8 @@ const handleSubmit = () => {
                         <a href="https://twitter.com/tedxsamaru" target="_blank"><img src="../assets/images/footer/TwitterLogo.png" alt="X" /></a>
                         <a href="https://www.instagram.com/tedxsamaru" target="_blank"><img src="../assets/images/footer/InstagramLogo.png" alt="Instagram" /></a>
                         <a href="https://www.linkedin.com/company/tedxsamaru" target="_blank"><img src="../assets/images/footer/LinkedInLogo.png" alt="Linkedin" /></a>
-                        <a href="tedxsamaru@gmail.com" target="_blank"><img src="../assets/images/footer/Email.png" alt="Gmail" /></a>
-                        <a href="" target="_blank"><img src="../assets/images/footer/youtubeLogo.png" alt="youtube" /></a>
+                        <a href="mailto:tedxsamaru@gmail.com" target="_blank"><img src="../assets/images/footer/Email.png" alt="Gmail" /></a>
+                        <a href="https://www.youtube.com/@TEDxSamaru" target="_blank"><img src="../assets/images/footer/youtubeLogo.png" alt="youtube" /></a>
                     </div>
                 </div>
             </div>

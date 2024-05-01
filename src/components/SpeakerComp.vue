@@ -33,7 +33,7 @@ export default {
         return {
             speakers: [
                 {
-                    name: 'Karen Jane', title: 'CEO', img: '/images/speakers/1.jpg',
+                    name: 'Unveiling Soon', title: 'CEO', img: '/images/speakers/5.jpg',
                     topic: 'The Importance of research',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -44,7 +44,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Karen Jane', title: 'Senior Software Engineer', img: '/images/speakers/2.jpg',
+                    name: 'Unveiling Soon', title: 'Senior Software Engineer', img: '/images/speakers/5.jpg',
                     topic: 'Sucess Key',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -55,7 +55,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Steve Paul', title: 'Public Speaker', img: '/images/speakers/3.jpg',
+                    name: 'Unveiling Soon', title: 'Public Speaker', img: '/images/speakers/5.jpg',
                     topic: 'This is Life',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -66,7 +66,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Karen Jane', title: 'Developer Relations Engineer', img: '/images/speakers/1.jpg',
+                    name: 'Unveiling Soon', title: 'Social Entrepreneur', img: '/images/speakers/5.jpg',
                     topic: 'Love is an Illusion',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -77,7 +77,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Steve Paul', title: 'Founder/Managing Partner', img: '/images/speakers/1.jpg',
+                    name: 'Unveiling Soon', title: 'Founder/Managing Partner', img: '/images/speakers/5.jpg',
                     topic: 'The Importance of Learning',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -88,7 +88,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Steve Paul', title: 'Founder', img: '/images/speakers/1.jpg',
+                    name: 'Unveiling Soon', title: 'Global Advocate', img: '/images/speakers/5.jpg',
                     topic: 'The Importance of Learning',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -99,7 +99,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Karen Jane', title: 'Spoken Word Poet', img: '/images/speakers/1.jpg',
+                    name: 'Unveiling Soon', title: 'Spoken Word Poet', img: '/images/speakers/5.jpg',
                     topic: 'The Importance of Learning',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -110,7 +110,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Karen Jane', title: 'SDG Activist', img: '/images/speakers/1.jpg',
+                    name: 'Unveiling Soon', title: 'SDG Activist', img: '/images/speakers/5.jpg',
                     topic: 'The Importance of Learning',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {
@@ -121,7 +121,40 @@ export default {
                     }
                 },
                 {
-                    name: 'Adora Kane', title: 'Director', img: '/images/speakers/3.jpg',
+                    name: 'Unveiling Soon', title: 'Author, Novelist', img: '/images/speakers/5.jpg',
+                    topic: 'This is Life',
+                    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
+                    link: {
+                        fb: '',
+                        x: 'x.com',
+                        in: 'linkedin.com',
+                        ig: ''
+                    }
+                },
+                {
+                    name: 'Unveiling Soon', title: 'Life Coach', img: '/images/speakers/5.jpg',
+                    topic: 'This is Life',
+                    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
+                    link: {
+                        fb: '',
+                        x: 'x.com',
+                        in: 'linkedin.com',
+                        ig: ''
+                    }
+                },
+                {
+                    name: 'Unveiling Soon', title: 'Business Leader', img: '/images/speakers/5.jpg',
+                    topic: 'This is Life',
+                    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
+                    link: {
+                        fb: '',
+                        x: 'x.com',
+                        in: 'linkedin.com',
+                        ig: ''
+                    }
+                },
+                {
+                    name: 'Unveiling Soon', title: 'Health Expert', img: '/images/speakers/5.jpg',
                     topic: 'This is Life',
                     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, architecto.',
                     link: {

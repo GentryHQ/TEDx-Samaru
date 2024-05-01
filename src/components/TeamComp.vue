@@ -48,10 +48,10 @@ export default {
                     topic: 'Founder, FarmerTech',
                     desc: 'Daniel is a natural leader with profound passion for leveraging technology to effect positive change. He is a certified Drone pilot and the founder of FarmerTech, an innovative agricultural technology company set to revolutionize modern farming practices through the integration of drone technology and other cutting edge technology ',
                     link: {
-                        fb: 'www.facebook.com',
-                        x: 'x.com',
-                        in: 'linkedin.com',
-                        ig: ''
+                        fb: 'https://www.facebook.com/alayande.daniel',
+                        x: 'https://twitter.com/alayandedaniel?t=JHvTHF1UjgQCeFxv7lVIaQ&s=09',
+                        in: 'https://www.linkedin.com/in/alayande-daniel-6a044417a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+                        ig: 'https://www.instagram.com/alayande_daniel?igsh=MzRlODBiNWFlZA=='
                     }
                 },
                 {
@@ -92,10 +92,10 @@ export default {
                     topic: 'Founder, Road Sage',
                     desc: 'Mowa is a Digital Communication and Creative Expert who is very passionate about storytelling. She is the producer and host of The Million and One Podcast and Founder of Road Sage - a platform dedicated to telling the tales of road travel experiences in Nigeria for Natives and Foreigners alike.',
                     link: {
-                        fb: 'facebook.com',
-                        x: 'x.com',
-                        in: 'linkedin.com',
-                        ig: ''
+                        fb: 'https://www.facebook.com/profile.php?id=100069851383294',
+                        x: 'https://twitter.com/mowa_mi?t=3HwmQ9-uPqpPF9SWcmhGjQ&s=09',
+                        in: 'https://www.linkedin.com/in/mowa-mijinyawa-mowa-mi-56623b223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+                        ig: 'https://www.instagram.com/the.mowa.mi?igsh=MzRlODBiNWFlZA=='
                     }
                 },
                 {
@@ -114,10 +114,10 @@ export default {
                     topic: 'Legal Scholar',
                     desc: 'Monyei is a seasoned publications manager with a demonstrated history of excellence working in the education management industry. With proficiency in public speaking, and creative writing he heads the sponsorship and partnership unit.',
                     link: {
-                        fb: 'facebook.com',
-                        x: 'x.com',
-                        in: 'linkedin.com',
-                        ig: ''
+                        fb: 'https://www.facebook.com/daniel.monyei.7',
+                        x: 'https://twitter.com/Lordscelle?t=Ps29hcVGE5-NKHnqBOvlmA&s=09',
+                        in: ' https://www.linkedin.com/in/daniel-chukwueloka-monyei-96625b19a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+                        ig: 'https://www.instagram.com/lordscellemonyei?igsh=MzRlODBiNWFlZA=='
                     }
                 },
                 {
@@ -125,10 +125,10 @@ export default {
                     topic: 'Lead Researcher, Fellow Taxes',
                     desc: 'Ibrahim is a communication strategist who is passionate about human capital development. He is a Programs Manager, Gidan Yanci Fellow, and Lead Researcher at Follow Taxes.',
                     link: {
-                        fb: 'facebook.com',
-                        x: 'x.com',
-                        in: 'linkedin.com',
-                        ig: ''
+                        fb: 'https://www.facebook.com/ibraheems.idris.7?mibextid=LQQJ4d',
+                        x: 'https://twitter.com/Fulatan3?t=jqCXhrTHDERW-tymjP0spQ&s=09',
+                        in: 'https://www.linkedin.com/in/ibrahim-idris-a0759719a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+                        ig: 'https://www.instagram.com/fulatan_?igsh=NDMzOWprcWthZG02&utm_source=qr'
                     }
                 },
             ],
@@ -179,7 +179,7 @@ export default {
         background-color: v.$White;
         padding: 1.25rem 1.5rem;
         text-align: left;
-        height: 120px;
+        height: 140px;
 
 
         h4 {

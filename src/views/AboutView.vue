@@ -76,7 +76,7 @@
 
   <div class="why-attend-section">
    <div class="container">
-    <h2>Why Attend <span> Tedx</span> Samaru</h2>
+    <h2>Why Attend <span> TEDx</span> Samaru</h2>
 
     <div class="why-attend-section-wrapper">
      <WhyAttendCard
@@ -115,7 +115,7 @@
    </div>
   </div>
   <div class="organizing-team">
-   <div class="container">
+   <div class="container" id="team">
     <h2>Meet The <span> Organizing</span> Team</h2>
     <p>
      TEDx Samaru is organized and run by a dedicated team of volunteers who are passionate about
