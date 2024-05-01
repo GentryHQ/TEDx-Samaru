@@ -137,7 +137,7 @@ import ButtonComp from '../components/ButtonComp.vue'
 import SponsorshipPerkCard from '../components/SponsorshipPerkCard.vue'
 import FaqComp from '../components/FaqComp.vue'
 
-const downloadUrl = 'https://drive.google.com/file/d/1oZppnuJuspJ-qIhn2gU-Bkf4qdrEYZEN/view?usp=drivesdk';
+const downloadUrl = 'https://drive.google.com/file/d/1opNM-JC01wNtnQCNyWccZL6qVAcj2m9Q/view?usp=drivesdk';
 
 const handleDownload = () => {
   const link = document.createElement('a');
