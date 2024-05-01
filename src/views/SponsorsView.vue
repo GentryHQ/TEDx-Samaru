@@ -57,7 +57,7 @@
       :icon-src="'/images/sponsors-page/perk-cards-icons/Icon6.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
-      :text="'Promotional materials in confrence souvenir'"
+      :text="'Promotional materials in conference souvenir'"
       :icon-src="'/images/sponsors-page/perk-cards-icons/Icon7.png'"
      ></SponsorshipPerkCard>
      <SponsorshipPerkCard
