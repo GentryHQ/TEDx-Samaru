@@ -38,6 +38,7 @@
 
     <div class="wrapper">
         <h2>Our Speakers for this event</h2>
+        <p>Our Amazing Speakers Will Be Revealed Soon!</p>
         <div class="container">
             <SpeakerComp :isSlider="false" />
         </div>
