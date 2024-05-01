@@ -1,6 +1,14 @@
 <script setup>
 // import MarqueeComp from "../components/MarqueeComp.vue";
 import ButtonComp from "../components/ButtonComp.vue";
+const handleSubmit = () => {
+  console.log('Button clicked');
+  // Add form submission logic here
+  // For example, you can submit the form using JavaScript:
+  document.getElementById('mc-embedded-subscribe-form').submit();
+  // Or trigger a submit event if you're using Vue 3's Composition API:
+  // router.currentRoute.value.meta.handleSubmit();
+}
 </script>
 <template>
  <div class="footer">
@@ -17,26 +25,26 @@ import ButtonComp from "../components/ButtonComp.vue";
                 <h1>Join our newsletter</h1>
                 <p>We’ll send you a nice letter once per week. No spam.</p>
             </div>
-            <div class="newsletter-right">
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                <ButtonComp class="plain-red">Subscribe</ButtonComp>
-            </div>
+            <form class="newsletter-right" action="https://tedxsamaru.us18.list-manage.com/subscribe/post?u=292d8b3f559a301c0bb131bd0&amp;id=647894c036&amp;f_id=00a5c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                <input type="email" id="email" name="EMAIL" placeholder="Enter your email address" required>
+                <ButtonComp type="submit" class="plain-red"  @click="handleSubmit">Subscribe</ButtonComp>
+            </form>
         </div>
         <hr class="footer-line"/>
         <div class="footer-2">
             <img class="logo" src="../assets/images/footer/footer_logo.png" alt="TedX Logo">
             <div class="footer-2-section">
-                <router-link :to="{ name: 'about' }">ABOUT</router-link>
-                <router-link :to="{ name: 'speakers' }">SPEAKERS</router-link>
-                <router-link :to="{ name: 'sponsors', hash: '#faq' }">FAQ</router-link>
+                <router-link class="footer-text" :to="{ name: 'about' }">ABOUT</router-link>
+                <router-link class="footer-text" :to="{ name: 'speakers' }">SPEAKERS</router-link>
+                <router-link class="footer-text" :to="{ name: 'sponsors', hash: '#faq' }">FAQ</router-link>
             </div>
             <div class="footer-2-section">
-                <router-link :to="{ name: '' }">JOIN THE COMMUNITY</router-link>
-                <router-link :to="{ name: 'sponsors' }">SPONSORS AND PARTNERS</router-link>
+                <router-link class="footer-text" :to="{ name: '' }">JOIN THE COMMUNITY</router-link>
+                <router-link class="footer-text" :to="{ name: 'sponsors' }">SPONSORS AND PARTNERS</router-link>
             </div>
             <div class="footer-2-section">
-                <router-link :to="{ name: '' }" >PRIVACY POLICY</router-link>
-                <router-link :to="{ name: 'contact' }">CONTACT US</router-link>
+                <router-link class="footer-text" :to="{ name: '' }" >PRIVACY POLICY</router-link>
+                <router-link class="footer-text" :to="{ name: 'contact' }">CONTACT US</router-link>
                 <div class="socials">
                     <p>Follow us on</p>
                     <div class="social-links">
@@ -217,6 +225,10 @@ import ButtonComp from "../components/ButtonComp.vue";
     .newsletter-right,
     .footer-2 {
         flex-direction: column;
+    }
+
+    .footer-text {
+        font-size: 18px;
     }
 
     .footer-2-section {

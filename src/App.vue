@@ -18,6 +18,7 @@ import FooterComp from './components/FooterComp.vue';
           <RouterLink :to="{ name: 'speakers' }" @click="closeMenu">Speakers</RouterLink>
           <RouterLink :to="{ name: 'about' }" @click="closeMenu">About</RouterLink>
           <RouterLink :to="{ name: 'sponsors' }" @click="closeMenu">Sponsors</RouterLink>
+          <RouterLink :to="{ name: 'contact' }" @click="closeMenu">Contact</RouterLink>
           <Button button-type="plain" class="cta" @click="closeMenu" />
         </div>
 

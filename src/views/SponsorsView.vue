@@ -15,7 +15,7 @@
     <p>
      Welcome to TEDx Samaru, where innovation meets inspiration, and reinvention is not just a
      concept but a way of life. We invite you to join us on this transformative journey as we
-     redefine the boundaries of human potential and push the limits of conventional thinking. 
+     redefine the boundaries of human potential and push the limits of conventional thinking.
     </p>
     <p>
      Our Partners and Sponsors are a community of forward thinkers and top brands who are ready to
