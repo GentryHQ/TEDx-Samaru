@@ -71,7 +71,7 @@
     </div>
 
     <div class="btn">
-     <ButtonComp>DOWNLOAD SPONSORSHIP DETAILS</ButtonComp>
+     <ButtonComp @click="handleDownload" route-name="sponsors">DOWNLOAD SPONSORSHIP DETAILS</ButtonComp>
     </div>
    </div>
   </div>
@@ -136,6 +136,15 @@
 import ButtonComp from '../components/ButtonComp.vue'
 import SponsorshipPerkCard from '../components/SponsorshipPerkCard.vue'
 import FaqComp from '../components/FaqComp.vue'
+
+const downloadUrl = 'https://drive.google.com/file/d/1oZppnuJuspJ-qIhn2gU-Bkf4qdrEYZEN/view?usp=drivesdk';
+
+const handleDownload = () => {
+  const link = document.createElement('a');
+  link.href = downloadUrl;
+  link.setAttribute('download', '');
+  link.click();
+};
 </script>
 
 <style lang="scss" scoped>

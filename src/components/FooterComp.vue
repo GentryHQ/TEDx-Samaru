@@ -23,7 +23,7 @@ const handleSubmit = () => {
             </div>
             <form class="newsletter-right" action="https://tedxsamaru.us18.list-manage.com/subscribe/post?u=292d8b3f559a301c0bb131bd0&amp;id=647894c036&amp;f_id=00a5c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
                 <input type="email" id="email" name="EMAIL" placeholder="Enter your email address" required>
-                <ButtonComp type="submit" class="plain-red"  @click="handleSubmit">Subscribe</ButtonComp>
+                <ButtonComp type="submit" routeName="subscribed" class="plain-red"  @click="handleSubmit">Subscribe</ButtonComp>
             </form>
         </div>
         <hr class="footer-line"/>
