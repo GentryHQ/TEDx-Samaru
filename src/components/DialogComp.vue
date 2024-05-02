@@ -76,7 +76,7 @@ export default {
 }
 
 ::backdrop {
-    background-color: black;
+    background-color: rgba(48, 0, 0, 0.669);
 }
 
 button {
@@ -116,8 +116,8 @@ button {
         p {
             margin-block-end: 0.5rem;
             font: {
-                weight: v.$fw6;
-                size: 20px;
+                weight: v.$fw5;
+                size: 18px;
             }
         }
         svg {
@@ -163,15 +163,15 @@ button {
 
     h4 {
         font: {
-            size: clamp(1.25rem, 1rem + 1.3333vw, 1.5rem);
-            weight: v.$fw6;
+            size: clamp(1.125rem, 1rem + 1.3333vw, 1.375rem);
+            weight: v.$fw7;
         }
         margin-block-end: 0.5rem;
     }
 
     p {
-        font-size: 1.0625rem;
-        font-weight: v.$fw5;
+        font-size: 1rem;
+        font-weight: v.$fw4;
     }
 }
 
@@ -181,12 +181,16 @@ button {
 
     h3 {
         font: {
-            size: 28px;
+            size: 24px;
             weight: v.$fw7;
         }            
         margin-block-end: 0.75rem;
         letter-spacing: -1px;
 
+    }
+
+    p {
+        font-size: 18px;
     }
 }
 </style>

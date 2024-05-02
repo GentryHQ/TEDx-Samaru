@@ -179,7 +179,10 @@ export default {
         background-color: v.$White;
         padding: 1.25rem 1.5rem;
         text-align: left;
-        height: 140px;
+        min-height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
 
         h4 {

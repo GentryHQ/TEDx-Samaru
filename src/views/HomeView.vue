@@ -37,7 +37,8 @@ import SpeakerComp from "../components/SpeakerComp.vue";
         </div>
       </div>
     </div>
-    <div class="about">
+
+    <div class="about container">
       <div class="imgs">
         <img src="../assets/images/collaborate.png" alt="ted-banner" />
       </div>
@@ -299,7 +300,7 @@ import SpeakerComp from "../components/SpeakerComp.vue";
 .about {
   display: flex;
   width: 100%;
-  padding: 80px;
+  padding: 40px;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
