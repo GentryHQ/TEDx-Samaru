@@ -7,7 +7,7 @@
             <h2>Contact Us</h2>
             <p>Our friendly team would love to hear from you.</p>
             <div>
-              <form action="https://formspree.io/f/xeqynzyo" method="POST">
+              <form action="https://formspree.io/f/xkndyqzl" method="POST">
                 <div class="contact-form">
                   <div class="input-group">
                     <FormInput class="form-group" :name="'First Name'" :label="'First Name'" :placeholder="'First Name'"
