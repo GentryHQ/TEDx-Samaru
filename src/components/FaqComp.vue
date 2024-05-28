@@ -46,7 +46,7 @@ export default {
                 { question: 'Who are the speakers?', answer: "Our speakers are trailblazers, visionaries and local heroes who have dared to reinvent across diverse fields like technology, business, science, art, and social impact. From award-winning innovators to activists reshaping norms, they take the iconic red circle to share their bold journeys of reinvention.", open: false },
                 { question: 'How can I attend?', answer: "Tickets for the main TedX Samaru event go on sale annually. However, we offer a variety of other experiences year-round like webinars, workshops and community meetups. Do sign up for our newsletter to stay updated.", open: false },
                 { question: 'How can I get involved or sponsor?', answer: "There are a couple of ways to join the reinvention revolution, and you can do that as a partner, volunteer or sponsor. Visit our Sponsorship page to explore the various opportunities and benefits of supporting TEDx Samaru.", open: false },
-                { question: 'When and where will TEDxSamaru take place?', answer: "TEDxSamaru will take place on the 10th of August 10th, at the Centre of Excellence, Ahmadu Bello University, Zaria for TEDxSamaru", open: false },
+                { question: 'When and where will TEDxSamaru take place?', answer: "TEDxSamaru will take place on the 10th of August 10th, at the Centre of Excellence, Ahmadu Bello University, Zaria.", open: false },
             ]
         }
     },
