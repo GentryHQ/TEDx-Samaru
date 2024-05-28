@@ -7,7 +7,7 @@
      Join a family of bold thinkers and revolutionary brands who are igniting change and
      reinvention.
     </p>
-    <ButtonComp class="btn" route-name="contact">Get Started</ButtonComp>
+    <ButtonComp @click="handleDownload" class="btn" route-name="contact">Get Started</ButtonComp>
    </div>
   </div>
   <div class="sponsor-text-section">

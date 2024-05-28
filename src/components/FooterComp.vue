@@ -18,12 +18,12 @@ const handleSubmit = () => {
     <div class="main-footer">
         <div class="newsletter" id="newsletter">
             <div class="newsletter-left">
-                <h1>Join our newsletter</h1>
-                <p>We’ll send you a nice letter once per week. No spam.</p>
+                <h1>Stay Inspired with Our Weekly Newsletter</h1>
+                <p>Subscribe now to receive a thought-provoking dose of ideas worth spreading</p>
             </div>
-            <form class="newsletter-right" action="https://tedxsamaru.us18.list-manage.com/subscribe/post?u=292d8b3f559a301c0bb131bd0&amp;id=647894c036&amp;f_id=00a5c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+            <form class="newsletter-right" action="https://tedxsamaru.us18.list-manage.com/subscribe/post?u=292d8b3f559a301c0bb131bd0&amp;id=647894c036&amp;f_id=00a5c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
                 <input type="email" id="email" name="EMAIL" placeholder="Enter your email address" required>
-                <ButtonComp type="submit" routeName="subscribed" class="plain-red"  @click="handleSubmit">Subscribe</ButtonComp>
+                <ButtonComp type="submit" routeName="home" class="plain-red"  @click="handleSubmit">Subscribe</ButtonComp>
             </form>
         </div>
         <hr class="footer-line"/>

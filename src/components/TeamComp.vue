@@ -33,7 +33,7 @@ export default {
         return {
             speakers: [
                 {
-                    name: 'David Daniel Bdliya', title: 'TEDx Samaru Organizer', img: '/images/team/4.jpg',
+                    name: 'David Daniel Bdliya', title: 'TEDx Samaru Organizer', img: '/images/team/4.webp',
                     topic: 'Founder, Grow with DDB',
                     desc: 'David is the founder of Grow with DDB, and the Co-Founder of Xtricated Media. His mission is to foster sustainable growth and impact in people and businesses by providing strategic solutions and implementing strategic systems.',
                     link: {
@@ -44,7 +44,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Daniel Alayande', title: 'TEDx Samaru Co-organizer', img: '/images/team/3.jpg',
+                    name: 'Daniel Alayande', title: 'TEDx Samaru Co-organizer', img: '/images/team/3.webp',
                     topic: 'Founder, FarmerTech',
                     desc: 'Daniel is a natural leader with profound passion for leveraging technology to effect positive change. He is a certified Drone pilot and the founder of FarmerTech, an innovative agricultural technology company set to revolutionize modern farming practices through the integration of drone technology and other cutting edge technology ',
                     link: {
@@ -55,7 +55,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Princess-Eunice Sagada', title: 'Head, Finance Team', img: '/images/team/2.jpg',
+                    name: 'Princess-Eunice Sagada', title: 'Head, Finance Team', img: '/images/team/2.webp',
                     topic: 'Former Executive, Enactus ABU',
                     desc: 'Princess is a creative extraordinaire and an experienced Financial Analyst. She has an eye for aesthetic and interior designs/architectural. She is also the former Secretary General of Enactus ABU.',
                     link: {
@@ -66,7 +66,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Hadiza Abdulkarim', title: 'Head, Welfare Team', img: '/images/team/1.jpg',
+                    name: 'Hadiza Abdulkarim', title: 'Head, Welfare Team', img: '/images/team/1.webp',
                     topic: 'CEO, PUP Industries',
                     desc: 'Super Diza is a HR Genius. She is the Chief Executive Officer of PUP Industries and a Former Team Lead of Enactus ABU. She is passionate about human interaction as well as character development, leaving no stone unturned.',
                     link: {
@@ -77,7 +77,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Stanley Nnamani', title: 'Head, Tech Team', img: '/images/team/6.jpg',
+                    name: 'Stanley Nnamani', title: 'Head, Tech Team', img: '/images/team/6.webp',
                     topic: 'Former Executive, Enactus ABU',
                     desc: 'Stanley is a Certified Software Developer with expertise in Artificial Intelligence. He was the former project manager of Enactus ABU, and loves bringing ideas to life. He is very passionate about using tech as a tool to solve real-life problems.',
                     link: {
@@ -88,7 +88,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Mowa Mijinyawa', title: 'Head, Media and Publicity', img: '/images/team/7.jpg',
+                    name: 'Mowa Mijinyawa', title: 'Head, Media and Publicity', img: '/images/team/7.webp',
                     topic: 'Founder, Road Sage',
                     desc: 'Mowa is a Digital Communication and Creative Expert who is very passionate about storytelling. She is the producer and host of The Million and One Podcast and Founder of Road Sage - a platform dedicated to telling the tales of road travel experiences in Nigeria for Natives and Foreigners alike.',
                     link: {
@@ -121,7 +121,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Ibrahim Idris', title: 'Head, Logistic team', img: '/images/team/5.jpg',
+                    name: 'Ibrahim Idris', title: 'Head, Logistic team', img: '/images/team/5.webp',
                     topic: 'Lead Researcher, Fellow Taxes',
                     desc: 'Ibrahim is a communication strategist who is passionate about human capital development. He is a Programs Manager, Gidan Yanci Fellow, and Lead Researcher at Follow Taxes.',
                     link: {
