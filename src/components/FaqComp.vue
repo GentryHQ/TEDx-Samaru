@@ -17,7 +17,7 @@
                 </div>
                 <transition name="fade">
                     <div v-if="faq.open" class="faq_answer">
-                        <p>{{ faq.answer }}</p>
+                        <p v-html="faq.answer.replaceAll('\n', '<br><br>')"></p>
                     </div>
                 </transition>
             </div>
@@ -42,10 +42,10 @@ export default {
     data() {
         return {
             faqs: [
-                { question: 'What is TEDxSamaru?', answer: "TEDxSamaru is an independently organized event that brings together brilliant minds to share powerful ideas around an annual theme - this year's being 'Reinvent'. Through inspiring conversations, performances and immersive experiences, we drive narratives that challenge conventional thinking.", open: false },
+                { question: 'What is TEDxSamaru?', answer: "TEDx Samaru is an independently organized event that brings together brilliant thought leaders to share powerful ideas around an annual theme. The aim of TEDx Samaru is to challenge conventional thinking and this is done in three phases.\n The pre event phase which consist of webinars, engaging online activities, talent scouting, and online competitions to keep our community educated, informed and entertained leading up to the event day \n The event day: This is a day where industry and thought leaders transfer knowledge and experience through engaging conversations, entertaining performances and immersive experiences while attendees strategically network and enjoy the joy of community \n Post event: TEDx Samaru is not a one time hit as it aims to be an immersive and change oriented community with its members meeting monthly to discuss and implement change oriented solutions to drive narratives that break new grounds", open: false },
                 { question: 'Who are the speakers?', answer: "Our speakers are trailblazers, visionaries and local heroes who have dared to reinvent across diverse fields like technology, business, science, art, and social impact. From award-winning innovators to activists reshaping norms, they take the iconic red circle to share their bold journeys of reinvention.", open: false },
                 { question: 'How can I attend?', answer: "Tickets for the main TedX Samaru event go on sale annually. However, we offer a variety of other experiences year-round like webinars, workshops and community meetups. Do sign up for our newsletter to stay updated.", open: false },
-                { question: 'How can I get involved or sponsor?', answer: "There are a couple of ways to join the reinvention revolution, and you can do that as a partner, volunteer or sponsor. Visit our Sponsorship page to explore the various opportunities and benefits of supporting TEDx Samaru.", open: false },
+                { question: 'How can I get involved or sponsor?', answer: "There are a couple of ways to join the revolution. You can do that by partnering with us or being a sponsor. Do well to visit our sponsorship page to explore the various options and benefits of partnering with us.", open: false },
                 { question: 'When and where will TEDxSamaru take place?', answer: "TEDxSamaru will take place on the 10th of August 10th, at the Centre of Excellence, Ahmadu Bello University, Zaria.", open: false },
             ]
         }

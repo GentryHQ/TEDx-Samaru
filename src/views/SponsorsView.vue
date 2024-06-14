@@ -86,20 +86,15 @@
       <div class="words">
        <h2>Increase brand awareness</h2>
        <p>
-        Tens of thousands of decision-making executives will come to TEDx Samaru, including key
-        buyers from leading industry brands and adjacent markets
+        TEDx Samaru is positioned to engage thousands of people online and offline which include key buyers from leading industry brands/ adjacent markets and a wide range of potential customers
        </p>
-       <p>Let’s make the most of this unique reach and get you in front of your target audience.</p>
+       <p>Partnering with us will position you right before your target audience.</p>
       </div>
      </div>
      <div class="card thought-leader-card">
       <div class="words">
        <h2>Be seen as a thought leader</h2>
-       <p>We bring the audience, you bring the expertise.</p>
-       <p>
-        Our sponsorship packages elevate your brand by associating it with the TEDx Samaru content
-        programmes and showcasing your knowledge through bespoke speaker opportunities.
-       </p>
+       <p>Our various sponsorship packages elevate your brand by associating it with the TEDx Samaru community thereby increasing your buyer persona</p>
       </div>
      </div>
     </div>

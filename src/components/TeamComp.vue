@@ -15,6 +15,7 @@
     <DialogComp v-if="selectedSpeaker" :speaker="selectedSpeaker" :open="!!selectedSpeaker"
         @close="selectedSpeaker = null" />
 </template>
+
 <script>
 import DialogComp from "../components/DialogComp.vue";
 import SpeakerSlider from "./SpeakerSlider.vue";
@@ -99,7 +100,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Innocent Bayila Solomon', title: 'Head, Design and Branding', img: '/images/team/8.jpg',
+                    name: 'Innocent Bayila Solomon', title: 'Head, Design and Branding', img: '/images/team/9.webp',
                     topic: 'Technical Director, Enactus ABU',
                     desc: 'Innocent is a multidisciplinary digital creator who specializes in graphic designs, print layout and typography. He is a prolific UI/UX designer who believes in the power of clean, minimalist designs  .',
                     link: {
@@ -110,7 +111,7 @@ export default {
                     }
                 },
                 {
-                    name: 'Monyei Chukwueloka Daniel', title: 'Head, Sponsorship and Partnership', img: '/images/team/9.jpg',
+                    name: 'Monyei Chukwueloka Daniel', title: 'Head, Sponsorship and Partnership', img: '/images/team/8.webp',
                     topic: 'Legal Scholar',
                     desc: 'Monyei is a seasoned publications manager with a demonstrated history of excellence working in the education management industry. With proficiency in public speaking, and creative writing he heads the sponsorship and partnership unit.',
                     link: {
@@ -179,7 +180,7 @@ export default {
         background-color: v.$White;
         padding: 1.25rem 1.5rem;
         text-align: left;
-        min-height: 140px;
+        min-height: 120px;
         display: flex;
         flex-direction: column;
         justify-content: center;

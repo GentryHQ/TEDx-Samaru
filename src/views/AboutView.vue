@@ -421,7 +421,7 @@ import ButtonComp from '../components/ButtonComp.vue'
 
   display: grid;
   gap: 1.875rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   align-items: start;
   justify-content: space-between;
   margin-bottom: 68px;
