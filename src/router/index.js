@@ -7,6 +7,7 @@ import Register from '../views/RegisterView.vue';
 import Contact from '../views/ContactView.vue';
 import NotFound from "../views/NotFound.vue";
 import Subscribed from "../views/SubscribedView.vue";
+import GetTicket from "../views/GetTicketView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,6 +46,11 @@ const router = createRouter({
       path: '/subscribed',
       name: 'subscribed',
       component: Subscribed
+    },
+    {
+      path: '/get-a-ticket',
+      name: 'getTicket',
+      component: GetTicket
     },
     // catchall 404
     {
