@@ -8,6 +8,7 @@ const form = reactive({
  email: '',
  phoneNumber: ''
 })
+defineEmits(['next'])
 </script>
 
 <template>
@@ -51,7 +52,7 @@ const form = reactive({
       type="tel"
      ></FormInput>
 
-     <button class="submit-btn" @click="handleSubmit">Next</button>
+     <button class="next-btn" @click="$emit('next', form)">Next</button>
     </div>
    </form>
   </div>
@@ -81,7 +82,7 @@ const form = reactive({
  .form-group {
   width: 100%;
  }
- .submit-btn {
+ .next-btn {
   width: 100%;
   text-align: center;
   @include m.btn(v.$White, v.$black, v.$red, v.$red, v.$White, v.$White, v.$black);

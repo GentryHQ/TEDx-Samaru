@@ -13,20 +13,63 @@
   <div class="get-tickets-section">
    <div class="container">
     <div class="wrapper">
-     <DetailsForm></DetailsForm>
+     <DetailsForm
+      v-show="current_step == 1"
+      @next="
+       (e) => {
+        customerDetails = e
+        current_step++
+       }
+      "
+     ></DetailsForm>
+     <div class="tickets-wrapper" v-show="current_step == 2">
+      <Ticket
+       v-for="ticket in tickets"
+       :key="ticket.id"
+       :ticket="ticket"
+       @get-ticket="
+        (e) => {
+         ticketToGet = e
+         showModal = true
+        }
+       "
+      ></Ticket>
+     </div>
      <div class="step-container">
       <span :class="current_step == 1 ? 'current-step-indicator' : 'step-indicator'"> </span>
       <span :class="current_step == 2 ? 'current-step-indicator' : 'step-indicator'"> </span>
       <span :class="current_step == 3 ? 'current-step-indicator' : 'step-indicator'"> </span>
      </div>
-
-     <div class="tickets-wrapper">
-      <Ticket></Ticket>
-     </div>
     </div>
    </div>
   </div>
+  <Modal :show="showModal" @update:show="showModal = $event">
+   <div class="modal-content">
+    <img :src="'/src/assets/images/tickets/' + ticketToGet.ticket_img_name" />
+    <p>Confirm and Purchase.</p>
 
+    <p>Review your details before completing your purchase:</p>
+
+    <div class="list">
+     <div class="list-item">
+      <p class="list-item-title">Full Name</p>
+      <p>{{ customerDetails.firstName + customerDetails.lastName }}</p>
+     </div>
+     <div class="list-item">
+      <p class="list-item-title">Email</p>
+      <p>{{ customerDetails.email }}</p>
+     </div>
+     <div class="list-item">
+      <p class="list-item-title">Phone Number</p>
+      <p>{{ customerDetails.phoneNumber }}</p>
+     </div>
+    </div>
+   </div>
+   <template #actions>
+    <button class="cancel-btn" @click="showModal = false">Cancel</button>
+    <button class="confirm-btn" @click="confirmAction">Confirm and Purchase</button>
+   </template>
+  </Modal>
   <div class="become-a-sponsor-section">
    <div class="container">
     <h2>Become A <span> Sponsor </span> Today</h2>
@@ -147,6 +190,7 @@ import Ticket from '../components/tickets/Ticket.vue'
 import DetailsForm from '../components/tickets/DetailsForm.vue'
 import SponsorshipPerkCard from '../components/SponsorshipPerkCard.vue'
 import FaqComp from '../components/FaqComp.vue'
+import Modal from '../components/Modal.vue'
 
 const downloadUrl =
  'https://drive.google.com/file/d/1opNM-JC01wNtnQCNyWccZL6qVAcj2m9Q/view?usp=drivesdk'
@@ -159,6 +203,72 @@ const handleDownload = () => {
 }
 
 const current_step = ref(1)
+const ticketToGet = reactive({})
+const customerDetails = reactive({})
+const showModal = ref(false)
+
+const tickets = reactive([
+ {
+  id: 1,
+  ticket_img_name: 'ticket-1.png',
+  ticket_title: 'Standard Ticket',
+  ticket_price: 5000,
+  ticket_full_price: 8000,
+  ticket_perks: [
+   'Hand Band',
+   'Jotter',
+   'Pen',
+   'Standard Level Refreshment',
+   'Networking opportunities'
+  ]
+ },
+ {
+  id: 2,
+  ticket_img_name: 'ticket-2.png',
+  ticket_title: 'Premium Ticket',
+  ticket_price: 8000,
+  ticket_full_price: 10000,
+  ticket_perks: [
+   'Everything in Standard plus:',
+   'Digital Certificate of Attendance.',
+   'Premium Level Refreshment.',
+   'Entrance into raffle draw sponsored by one of our sponsors.',
+   'Paper Bag.',
+   'Premium Seating Space.'
+  ]
+ },
+ {
+  id: 3,
+  ticket_img_name: 'ticket-3.png',
+  ticket_title: 'Executive Plan',
+  ticket_price: 12000,
+  ticket_full_price: 15000,
+  ticket_perks: [
+   'Everything in Premium plus:',
+   'Executive Level Refreshment.',
+   'Calligraphed Certificate.',
+   'Tote Bag',
+   'Executive Seating Space.',
+   'Event Brochure.'
+  ]
+ },
+ {
+  id: 4,
+  ticket_img_name: 'ticket-4.png',
+  ticket_title: 'Supporters',
+  ticket_price: 30000,
+  ticket_perks: [
+   'Everything in Executive Ticket plus:',
+   'Special shout out.',
+   'Part of post event publication.',
+   'Exclusive access to the VIP lounge',
+   'Personalize note.',
+   'A merch.',
+   'Brand logo on our banner.',
+   'A Pop Up Booth.'
+  ]
+ }
+])
 </script>
 
 <style lang="scss" scoped>
@@ -266,10 +376,13 @@ span {
   margin-right: auto;
  }
 }
-.submit-btn {
+.confirm-btn {
  width: 100%;
  text-align: center;
  @include m.btn(v.$White, v.$black, v.$red, v.$red, v.$White, v.$White, v.$black);
+}
+.cancel-btn {
+ text-align: center;
 }
 
 .get-tickets-section {
