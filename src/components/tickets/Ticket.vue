@@ -11,12 +11,13 @@ const props = defineProps({
 defineEmits(['getTicket'])
 </script>
 <template>
- <div class="ticket">
+ <div class="ticket" :class="props.ticket.id == 4 ? 'ticket supporters-ticket' : 'ticket'">
   <div class="ticket-header">
    <img class="" :src="'/src/assets/images/tickets/' + props.ticket.ticket_img_name" />
    <h3>{{ props.ticket.ticket_title }}</h3>
 
    <div class="tickets-prices">
+    <h3 class="" v-if="props.ticket.id == 4">Starting From</h3>
     <h1>₦{{ props.ticket.ticket_price }}</h1>
     <p class="ticket-full-price" v-if="props.ticket.ticket_full_price">
      ₦{{ props.ticket.ticket_full_price }}
@@ -52,7 +53,8 @@ defineEmits(['getTicket'])
 @use '../../assets/css/mixin' as m;
 .ticket {
  background-color: v.$White;
- width: calc(50% - 16px);
+
+ border-radius: 0.5rem;
 
  .ticket-header {
   text-align: center;
@@ -84,5 +86,10 @@ defineEmits(['getTicket'])
   text-align: center;
   @include m.btn(v.$White, v.$black, v.$red, v.$red, v.$White, v.$White, v.$black);
  }
+}
+
+.supporters-ticket {
+ background-color: v.$black;
+ color: white;
 }
 </style>

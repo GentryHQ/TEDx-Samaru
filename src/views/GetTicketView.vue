@@ -4,6 +4,7 @@
    <div class="container">
     <img class="experience" src="../assets/images/about-page/experience.png" />
     <h1>Get Your Ticket Now</h1>
+    <CountdownClock :targetDate="newYearDate"></CountdownClock>
     <p>
      Join us at TEDx Samaru for a day of inspiration and connection. Please fill out the form below
      to secure your ticket
@@ -22,18 +23,54 @@
        }
       "
      ></DetailsForm>
-     <div class="tickets-wrapper" v-show="current_step == 2">
-      <Ticket
-       v-for="ticket in tickets"
-       :key="ticket.id"
-       :ticket="ticket"
-       @get-ticket="
-        (e) => {
-         ticketToGet = e
-         showModal = true
-        }
-       "
-      ></Ticket>
+     <div class="tickets" v-show="current_step == 2">
+      <div class="descriptions">
+       <h2>Select Your Ticket Type</h2>
+       <p>Choose the type of ticket that best suits you:</p>
+      </div>
+      <div class="tickets-wrapper">
+       <Ticket
+        v-for="ticket in tickets"
+        :key="ticket.id"
+        :ticket="ticket"
+        @get-ticket="
+         (e) => {
+          ticketToGet = e
+          showModal = true
+         }
+        "
+       ></Ticket>
+      </div>
+     </div>
+
+     <div class="payment-success-step-wrapper" v-show="current_step == 3">
+      <div class="ticket-image-section">
+       <h2>Congratulations, You are in!</h2>
+
+       <div>
+        <img :src="'/src/assets/images/tickets/' + ticketToGet.ticket_img_name" />
+        <h4>Thank You!</h4>
+        <p>
+         Thank you for purchasing your ticket to TEDx Samaru! You will receive a confirmation email
+         with your e-ticket shortly. We look forward to seeing you at the event.
+        </p>
+       </div>
+      </div>
+      <div class="event-details-section-wrapper">
+       <div class="container">
+        <div>
+         <h2>ReInvent Your Perspectives</h2>
+         <p>Centre of excellence Ahmadu Bello University, Zaria.</p>
+        </div>
+        <div>
+         <div>
+          <h3>August 10th, 2024</h3>
+          <p>Friday, 10:00pm WAT</p>
+         </div>
+         <p>500+ going</p>
+        </div>
+       </div>
+      </div>
      </div>
      <div class="step-container">
       <span :class="current_step == 1 ? 'current-step-indicator' : 'step-indicator'"> </span>
@@ -46,28 +83,66 @@
   <Modal :show="showModal" @update:show="showModal = $event">
    <div class="modal-content">
     <img :src="'/src/assets/images/tickets/' + ticketToGet.ticket_img_name" />
-    <p>Confirm and Purchase.</p>
+    <div class="confirmation-text">
+     <h4>Confirm and Purchase.</h4>
 
-    <p>Review your details before completing your purchase:</p>
+     <p>Review your details before completing your purchase:</p>
+    </div>
 
     <div class="list">
      <div class="list-item">
-      <p class="list-item-title">Full Name</p>
+      <h4 class="list-item-title">Full Name</h4>
       <p>{{ customerDetails.firstName + customerDetails.lastName }}</p>
      </div>
      <div class="list-item">
-      <p class="list-item-title">Email</p>
+      <h4 class="list-item-title">Email</h4>
       <p>{{ customerDetails.email }}</p>
      </div>
      <div class="list-item">
-      <p class="list-item-title">Phone Number</p>
+      <h4 class="list-item-title">Phone Number</h4>
       <p>{{ customerDetails.phoneNumber }}</p>
      </div>
     </div>
    </div>
    <template #actions>
     <button class="cancel-btn" @click="showModal = false">Cancel</button>
-    <button class="confirm-btn" @click="confirmAction">Confirm and Purchase</button>
+    <button
+     class="confirm-btn"
+     @click="
+      () => {
+       showModal = false
+       showPaymentSuccessModal = true
+      }
+     "
+    >
+     Confirm and Purchase
+    </button>
+   </template>
+  </Modal>
+  <Modal :show="showPaymentSuccessModal" @update:show="showPaymentSuccessModal = $event">
+   <div class="modal-content">
+    <img :src="'/src/assets/images/tickets/' + ticketToGet.ticket_img_name" />
+    <div class="confirmation-text">
+     <h4>Thank You!</h4>
+
+     <p>
+      Thank you for purchasing your ticket to TEDx Samaru! You will receive a confirmation email
+      with your e-ticket shortly. We look forward to seeing you at the event.
+     </p>
+    </div>
+   </div>
+   <template #actions>
+    <button
+     class="cancel-btn"
+     @click="
+      () => {
+       showPaymentSuccessModal = false
+       current_step++
+      }
+     "
+    >
+     Cancel
+    </button>
    </template>
   </Modal>
   <div class="become-a-sponsor-section">
@@ -191,6 +266,7 @@ import DetailsForm from '../components/tickets/DetailsForm.vue'
 import SponsorshipPerkCard from '../components/SponsorshipPerkCard.vue'
 import FaqComp from '../components/FaqComp.vue'
 import Modal from '../components/Modal.vue'
+import CountdownClock from '../components/CountdownClock.vue'
 
 const downloadUrl =
  'https://drive.google.com/file/d/1opNM-JC01wNtnQCNyWccZL6qVAcj2m9Q/view?usp=drivesdk'
@@ -206,7 +282,9 @@ const current_step = ref(1)
 const ticketToGet = reactive({})
 const customerDetails = reactive({})
 const showModal = ref(false)
+const showPaymentSuccessModal = ref(false)
 
+const newYearDate = ref(new Date('2024-01-01T00:00:00'))
 const tickets = reactive([
  {
   id: 1,
@@ -322,6 +400,34 @@ span {
  margin-block: 5rem;
 }
 
+.modal-content {
+ .confirmation-text {
+  p {
+   font-size: 1rem;
+  }
+  h4 {
+   font-weight: bold;
+  }
+ }
+ .list {
+  .list-item {
+   .list-item-title {
+    font-size: 1rem;
+    font-weight: 300;
+    p {
+     font-weight: bold;
+    }
+   }
+  }
+ }
+ .modal-content > *:not(:last-child) {
+  margin-bottom: 1.25rem; /* 20px */
+ }
+ .list > *:not(:last-child) {
+  margin-bottom: 1.25rem; /* 20px */
+ }
+}
+
 .contact-details-form {
  display: flex;
  flex-direction: column;
@@ -383,19 +489,44 @@ span {
 }
 .cancel-btn {
  text-align: center;
+ font-style: normal;
+ border: 1px solid gray;
+ border-radius: 0.5rem;
+ width: 30%;
+ text-transform: uppercase;
+ background-color: #f6f6f6;
+ transition: all 0.5s ease-in-out;
+ &:hover,
+ &:focus {
+  background-color: #fafafa;
+  color: black;
+ }
 }
 
 .get-tickets-section {
  background-color: v.$primary-50;
  padding: 5rem;
  text-align: start;
+ .descriptions {
+  text-align: center;
+ }
  .tickets-wrapper {
-  display: flex;
+  margin-block-start: 1.75rem;
+  display: grid;
+  gap: 1.875rem;
+  align-items: center;
 
-  align-items: start;
-  margin-left: auto;
-  margin-right: auto;
   grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 768px) {
+   .perks-card-wrapper {
+    display: flex;
+    flex-direction: column;
+   }
+  }
+
+  @media screen and (max-width: 768px) {
+   padding: 1rem;
+  }
  }
 
  p {
@@ -403,6 +534,42 @@ span {
  }
  @media screen and (max-width: 768px) {
   padding: 2rem;
+ }
+
+ @media screen and (max-width: 768px) {
+  .payment-success-step-wrapper {
+   display: flex;
+   flex-direction: column;
+  }
+ }
+ .payment-success-step-wrapper {
+  display: flex;
+  flex-direction: row;
+  .ticket-image-section {
+   padding: 4rem;
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+  }
+  .event-details-section-wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 400px;
+   width: 50%;
+   color: white;
+   background-image: url('../assets/images/sponsors-page/event-hall.png');
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   justify-content: end;
+
+   .container {
+    padding: 2rem;
+    background: rgb(255 255 255 / 14%);
+    backdrop-filter: blur(10px);
+   }
+  }
  }
 }
 .endNote {
