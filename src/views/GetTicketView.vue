@@ -62,12 +62,32 @@
          <h2>ReInvent Your Perspectives</h2>
          <p>Centre of excellence Ahmadu Bello University, Zaria.</p>
         </div>
-        <div>
+        <div class="event-details-roster">
          <div>
           <h3>August 10th, 2024</h3>
           <p>Friday, 10:00pm WAT</p>
          </div>
-         <p>500+ going</p>
+         <p>
+          <img src="../assets/images/Avatars-roster.svg" height="10" />
+          <span> 500+ </span> going
+         </p>
+        </div>
+
+        <div class="days-countdown">
+         <div class="wrapper">
+          <div class="item-block">
+           <h4 class="item-title">Days</h4>
+           <h3 class="item-content">52</h3>
+          </div>
+          <div class="item-block">
+           <h4>Hours</h4>
+           <h3>52</h3>
+          </div>
+          <div class="item-block">
+           <h4>Minutes</h4>
+           <h3>52</h3>
+          </div>
+         </div>
         </div>
        </div>
       </div>
@@ -572,6 +592,12 @@ span {
   }
  }
 }
+
+.event-details-roster {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+}
 .endNote {
  background-color: v.$primary-900;
  padding: 9rem;
@@ -692,6 +718,37 @@ span {
  @media screen and (max-width: 768px) {
   padding: 2rem 0rem;
   text-align: start;
+ }
+}
+
+.days-countdown {
+ .wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background: rgb(255 255 255 / 24%);
+  color: #fff;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  .item-block {
+   width: 33.3333%;
+   h4 {
+    font-size: 1rem;
+    font-weight: 300;
+   }
+   h3 {
+    font-size: 2rem;
+    font-weight: 300;
+   }
+   display: flex;
+   flex-direction: column;
+   background: rgb(255 255 255 / 24%);
+   color: #fff;
+   border-radius: 10px;
+   backdrop-filter: blur(10px);
+   padding: 20px;
+  }
  }
 }
 </style>
