@@ -14,15 +14,22 @@
   <div class="get-tickets-section">
    <div class="container">
     <div class="wrapper">
-     <DetailsForm
-      v-show="current_step == 1"
-      @next="
-       (e) => {
-        customerDetails = e
-        current_step++
-       }
-      "
-     ></DetailsForm>
+     <div v-show="current_step == 1">
+      <div class="descriptions">
+       <h2>Personal Information</h2>
+       <p>Tell us a bit about yourself</p>
+      </div>
+
+      <DetailsForm
+       @next="
+        (e) => {
+         customerDetails = e
+         current_step++
+        }
+       "
+      ></DetailsForm>
+     </div>
+
      <div class="tickets" v-show="current_step == 2">
       <div class="descriptions">
        <h2>Select Your Ticket Type</h2>
@@ -43,54 +50,8 @@
       </div>
      </div>
 
-     <div class="payment-success-step-wrapper" v-show="current_step == 3">
-      <div class="ticket-image-section">
-       <h2>Congratulations, You are in!</h2>
-
-       <div>
-        <img :src="'/src/assets/images/tickets/' + ticketToGet.ticket_img_name" />
-        <h4>Thank You!</h4>
-        <p>
-         Thank you for purchasing your ticket to TEDx Samaru! You will receive a confirmation email
-         with your e-ticket shortly. We look forward to seeing you at the event.
-        </p>
-       </div>
-      </div>
-      <div class="event-details-section-wrapper">
-       <div class="container">
-        <div>
-         <h2>ReInvent Your Perspectives</h2>
-         <p>Centre of excellence Ahmadu Bello University, Zaria.</p>
-        </div>
-        <div class="event-details-roster">
-         <div>
-          <h3>August 10th, 2024</h3>
-          <p>Friday, 10:00pm WAT</p>
-         </div>
-         <p>
-          <img src="../assets/images/Avatars-roster.svg" height="10" />
-          <span> 500+ </span> going
-         </p>
-        </div>
-
-        <div class="days-countdown">
-         <div class="wrapper">
-          <div class="item-block">
-           <h4 class="item-title">Days</h4>
-           <h3 class="item-content">52</h3>
-          </div>
-          <div class="item-block">
-           <h4>Hours</h4>
-           <h3>52</h3>
-          </div>
-          <div class="item-block">
-           <h4>Minutes</h4>
-           <h3>52</h3>
-          </div>
-         </div>
-        </div>
-       </div>
-      </div>
+     <div class="payment-success" v-show="current_step == 3">
+      <PaymentSuccessful :purchasedTicket="ticketToGet"></PaymentSuccessful>
      </div>
      <div class="step-container">
       <span :class="current_step == 1 ? 'current-step-indicator' : 'step-indicator'"> </span>
@@ -141,6 +102,29 @@
   </Modal>
   <Modal :show="showPaymentSuccessModal" @update:show="showPaymentSuccessModal = $event">
    <div class="modal-content">
+    <div class="success-modal-header-text">
+     <h3>
+      <span>
+       <svg
+        width="22"
+        height="22"
+        viewBox="0 0 22 22"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+       >
+        <path
+         d="M21 10.0801V11.0001C20.9988 13.1565 20.3005 15.2548 19.0093 16.9819C17.7182 18.7091 15.9033 19.9726 13.8354 20.584C11.7674 21.1954 9.55726 21.122 7.53447 20.3747C5.51168 19.6274 3.78465 18.2462 2.61096 16.4372C1.43727 14.6281 0.879791 12.4882 1.02168 10.3364C1.16356 8.18467 1.99721 6.13643 3.39828 4.49718C4.79935 2.85793 6.69279 1.71549 8.79619 1.24025C10.8996 0.765018 13.1003 0.982445 15.07 1.86011M21 3.00011L11 13.0101L8.00001 10.0101"
+         stroke="#039855"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+        />
+       </svg>
+      </span>
+      Congratulations, You are in!
+     </h3>
+    </div>
+
     <img :src="'/src/assets/images/tickets/' + ticketToGet.ticket_img_name" />
     <div class="confirmation-text">
      <h4>Thank You!</h4>
@@ -153,7 +137,7 @@
    </div>
    <template #actions>
     <button
-     class="cancel-btn"
+     class="outlined-btn"
      @click="
       () => {
        showPaymentSuccessModal = false
@@ -165,110 +149,7 @@
     </button>
    </template>
   </Modal>
-  <div class="become-a-sponsor-section">
-   <div class="container">
-    <h2>Become A <span> Sponsor </span> Today</h2>
-    <p>
-     Ready to take your brand to the next level? Become a sponsor of TEDx Samaru and join us in
-     igniting innovation and inspiring change.
-    </p>
-    <div class="perks-card-wrapper">
-     <SponsorshipPerkCard
-      :text="'Stage Recognition'"
-      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon1.png'"
-     ></SponsorshipPerkCard>
-     <SponsorshipPerkCard
-      :text="'Partner Ticket'"
-      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon2.png'"
-     ></SponsorshipPerkCard>
-     <SponsorshipPerkCard
-      :text="'Logo placement on conference Website and Landing Pages'"
-      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon3.png'"
-     ></SponsorshipPerkCard>
-     <SponsorshipPerkCard
-      :text="'Logo placement on digital materials '"
-      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon4.png'"
-     ></SponsorshipPerkCard>
-     <SponsorshipPerkCard
-      :text="'Booth Space'"
-      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon5.png'"
-     ></SponsorshipPerkCard>
-     <SponsorshipPerkCard
-      :text="'Logo placement on speaker videos'"
-      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon6.png'"
-     ></SponsorshipPerkCard>
-     <SponsorshipPerkCard
-      :text="'Promotional materials in conference souvenir'"
-      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon7.png'"
-     ></SponsorshipPerkCard>
-     <SponsorshipPerkCard
-      :text="'Customized Breakout session'"
-      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon8.png'"
-     ></SponsorshipPerkCard>
-     <SponsorshipPerkCard
-      :text="'Activation & Lots more'"
-      :icon-src="'/images/sponsors-page/perk-cards-icons/Icon9.png'"
-     ></SponsorshipPerkCard>
-    </div>
 
-    <div class="btn">
-     <ButtonComp @click="handleDownload" route-name="sponsors"
-      >DOWNLOAD SPONSORSHIP DETAILS</ButtonComp
-     >
-    </div>
-   </div>
-  </div>
-  <div class="why-sponsor-tedx-section">
-   <div class="container">
-    <h2>Why <span> Sponsor TEDx</span> Samaru?</h2>
-    <p>
-     As a sponsor, your brand would be strategically positioned to meet a percentage of your target
-     audience - a healthy mixture of people who are familiar with your product and an introduction
-     to a fresh market. A one way ticket to get your brand in the eyes of your desired consumers.
-    </p>
-    <div class="why-sponsor-tedx-section-wrapper">
-     <div class="card">
-      <div class="words">
-       <h2>Increase brand awareness</h2>
-       <p>
-        TEDx Samaru is positioned to engage thousands of people online and offline which include key
-        buyers from leading industry brands/ adjacent markets and a wide range of potential
-        customers
-       </p>
-       <p>Partnering with us will position you right before your target audience.</p>
-      </div>
-     </div>
-     <div class="card thought-leader-card">
-      <div class="words">
-       <h2>Be seen as a thought leader</h2>
-       <p>
-        Our various sponsorship packages elevate your brand by associating it with the TEDx Samaru
-        community thereby increasing your buyer persona
-       </p>
-      </div>
-     </div>
-    </div>
-    <div class="end-note-wrapper">
-     <div class="why-sponsor-tedx-section-end-note">
-      <p>
-       We are here to build a meaningful experience for you, and we can help your company achieve
-       your marketing goals through experiential in-person and virtual events.
-      </p>
-      <h3><span>SOUND LIKE AN INCREDIBLE OPPORTUNITY FOR YOUR BRAND?</span></h3>
-     </div>
-    </div>
-
-    <div class="btn">
-     <ButtonComp route-name="contact">BECOME A SPONSOR</ButtonComp>
-    </div>
-   </div>
-  </div>
-
-  <div class="endNote">
-   <div class="container">
-    <h2>The Reinvention journey has begun. Will you be a pioneer on this path?</h2>
-   </div>
-  </div>
   <div class="faq">
    <div class="container">
     <FaqComp />
@@ -280,23 +161,12 @@
 <script setup>
 import { reactive, ref } from 'vue'
 
-import ButtonComp from '../components/ButtonComp.vue'
-import Ticket from '../components/tickets/Ticket.vue'
-import DetailsForm from '../components/tickets/DetailsForm.vue'
-import SponsorshipPerkCard from '../components/SponsorshipPerkCard.vue'
+import Ticket from '../components/getTicketsPage/Ticket.vue'
+import DetailsForm from '../components/getTicketsPage/DetailsForm.vue'
 import FaqComp from '../components/FaqComp.vue'
 import Modal from '../components/Modal.vue'
 import CountdownClock from '../components/CountdownClock.vue'
-
-const downloadUrl =
- 'https://drive.google.com/file/d/1opNM-JC01wNtnQCNyWccZL6qVAcj2m9Q/view?usp=drivesdk'
-
-const handleDownload = () => {
- const link = document.createElement('a')
- link.href = downloadUrl
- link.setAttribute('download', '')
- link.click()
-}
+import PaymentSuccessful from '../components/getTicketsPage/PaymentSuccessful.vue'
 
 const current_step = ref(1)
 const ticketToGet = reactive({})
@@ -304,7 +174,7 @@ const customerDetails = reactive({})
 const showModal = ref(false)
 const showPaymentSuccessModal = ref(false)
 
-const newYearDate = ref(new Date('2024-01-01T00:00:00'))
+const newYearDate = ref(new Date('2024-08-12T00:00:00'))
 const tickets = reactive([
  {
   id: 1,
@@ -433,10 +303,11 @@ span {
   .list-item {
    .list-item-title {
     font-size: 1rem;
-    font-weight: 300;
-    p {
-     font-weight: bold;
-    }
+    font-weight: 400;
+   }
+   p {
+    font-size: 1.25rem;
+    font-weight: 500;
    }
   }
  }
@@ -470,6 +341,11 @@ span {
  display: flex;
  flex-direction: column;
  gap: 2rem;
+ @media screen and (max-width: 768px) {
+  padding: 1rem;
+  padding-left: 0%;
+  padding-right: 0%;
+ }
 }
 .hero {
  position: relative;
@@ -500,6 +376,9 @@ span {
  .container {
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width: 768px) {
+   padding-inline: 0rem;
+  }
  }
 }
 .confirm-btn {
@@ -522,233 +401,62 @@ span {
   color: black;
  }
 }
+.outlined-btn {
+ text-align: center;
+ font-style: normal;
+ border: 1px solid gray;
+ border-radius: 0.5rem;
+ width: 100%;
+ text-transform: uppercase;
+ background-color: #f6f6f6;
+ transition: all 0.5s ease-in-out;
+ &:hover,
+ &:focus {
+  background-color: #fafafa;
+  color: black;
+ }
+ @include m.btn(v.$White, v.$black, v.$red, v.$red, v.$White, v.$White, v.$black);
+}
 
 .get-tickets-section {
  background-color: v.$primary-50;
  padding: 5rem;
  text-align: start;
+
+ @media screen and (max-width: 768px) {
+  padding: 1rem;
+  padding-left: 0%;
+  padding-right: 0%;
+ }
+
  .descriptions {
   text-align: center;
+  h2 {
+   font-size: x-large;
+  }
  }
  .tickets-wrapper {
   margin-block-start: 1.75rem;
   display: grid;
   gap: 1.875rem;
   align-items: center;
+  justify-content: center;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 500px);
   @media screen and (max-width: 768px) {
-   .perks-card-wrapper {
-    display: flex;
-    flex-direction: column;
-   }
-  }
-
-  @media screen and (max-width: 768px) {
-   padding: 1rem;
+   display: flex;
+   flex-direction: column;
   }
  }
 
  p {
   margin-block: 20px 48px;
  }
- @media screen and (max-width: 768px) {
-  padding: 2rem;
- }
-
- @media screen and (max-width: 768px) {
-  .payment-success-step-wrapper {
-   display: flex;
-   flex-direction: column;
-  }
- }
- .payment-success-step-wrapper {
-  display: flex;
-  flex-direction: row;
-  .ticket-image-section {
-   padding: 4rem;
-   background-color: white;
-   display: flex;
-   flex-direction: column;
-   width: 50%;
-  }
-  .event-details-section-wrapper {
-   display: flex;
-   flex-direction: column;
-   min-height: 400px;
-   width: 50%;
-   color: white;
-   background-image: url('../assets/images/sponsors-page/event-hall.png');
-   background-position: center center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   justify-content: end;
-
-   .container {
-    padding: 2rem;
-    background: rgb(255 255 255 / 14%);
-    backdrop-filter: blur(10px);
-   }
-  }
- }
 }
 
-.event-details-roster {
- display: flex;
- flex-direction: row;
- justify-content: space-between;
-}
-.endNote {
- background-color: v.$primary-900;
- padding: 9rem;
- text-align: center;
- color: v.$White;
-
- p {
-  margin-block: 20px 48px;
- }
- @media screen and (max-width: 768px) {
-  padding: 9rem 0rem;
- }
-}
-.become-a-sponsor-section {
- padding: 5rem;
- text-align: start;
- .btn {
-  margin-top: 2rem;
-  text-align: center;
- }
-
- p {
-  margin-block: 20px 48px;
- }
- .perks-card-wrapper {
-  margin-block-start: 1.75rem;
-  display: grid;
-  gap: 1.875rem;
-  align-items: start;
-
-  grid-template-columns: repeat(3, 1fr);
- }
- @media screen and (max-width: 768px) {
-  .perks-card-wrapper {
-   display: flex;
-   flex-direction: column;
-  }
- }
-
- @media screen and (max-width: 768px) {
-  padding: 1rem;
- }
-}
-.why-sponsor-tedx-section {
- @media screen and (max-width: 768px) {
-  padding: 2rem 0rem;
- }
-
- .btn {
-  margin-top: 2rem;
-  text-align: center;
- }
- padding: 5rem;
- text-align: start;
- p {
-  margin-block: 20px 48px;
- }
- .end-note-wrapper {
-  padding: 3rem;
-  @media screen and (max-width: 768px) {
-   padding: 0rem;
-   text-align: start;
-  }
- }
- .why-sponsor-tedx-section-end-note {
-  h3 {
-   text-align: center;
-   font-weight: bold;
-  }
-  padding: 2rem;
-  border-bottom: solid;
-  border-width: 0.5rem;
-  border-bottom-color: v.$black;
-  @media screen and (max-width: 768px) {
-   padding: 2rem 0rem;
-   text-align: start;
-   border-width: 1rem;
-  }
- }
- .words {
-  h2 {
-   color: v.$primary-500;
-  }
- }
- &-wrapper {
-  display: flex;
-  padding: 5rem;
-  flex-wrap: nowrap;
-  gap: 32px;
-  text-align: center;
-  .card {
-   width: calc(50% - 16px);
-   padding: 30px;
-   border-left: solid;
-   border-width: 0.5rem;
-   border-left-color: v.$black;
-  }
-
-  @media screen and (max-width: 768px) {
-   flex-direction: column;
-   padding: 0rem;
-   .card {
-    width: 100%;
-    border-left: solid;
-    border-width: thick;
-    padding: 1rem;
-    border-color: inherit;
-    text-align: start;
-   }
-   .thought-leader-card {
-    border-left-color: v.$primary-500;
-   }
-   .card {
-    border-top-color: v.$black;
-   }
-  }
- }
- @media screen and (max-width: 768px) {
-  padding: 2rem 0rem;
-  text-align: start;
- }
-}
-
-.days-countdown {
- .wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  background: rgb(255 255 255 / 24%);
-  color: #fff;
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-  .item-block {
-   width: 33.3333%;
-   h4 {
-    font-size: 1rem;
-    font-weight: 300;
-   }
-   h3 {
-    font-size: 2rem;
-    font-weight: 300;
-   }
-   display: flex;
-   flex-direction: column;
-   background: rgb(255 255 255 / 24%);
-   color: #fff;
-   border-radius: 10px;
-   backdrop-filter: blur(10px);
-   padding: 20px;
-  }
+.success-modal-header-text {
+ h3 {
+  font-weight: bold;
  }
 }
 </style>
