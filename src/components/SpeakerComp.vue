@@ -130,7 +130,7 @@ export default {
         background-color: v.$White;
         padding: 1.25rem 1.5rem;
         text-align: left;
-        height: 150px;
+        // height: 150px;
 
 
         h4 {
