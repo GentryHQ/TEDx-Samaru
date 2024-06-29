@@ -87,17 +87,65 @@
    </div>
    <template #actions>
     <button class="cancel-btn" @click="showModal = false">Cancel</button>
-    <button
-     class="confirm-btn"
-     @click="
+    <button class="confirm-btn" @click="makePayment()">
+     <!-- @click="
       () => {
        showModal = false
        showPaymentSuccessModal = true
       }
-     "
-    >
+     " -->
      Confirm and Purchase
     </button>
+   </template>
+  </Modal>
+  <Modal :show="showPaymentFailedModal" @update:show="showPaymentFailedModal = $event">
+   <div class="modal-content">
+    <div class="success-modal-header-text">
+     <h3>Something Went Wrong</h3>
+    </div>
+
+    <div class="confirmation-text">
+     <h4>Please Check Your Details And Try Again</h4>
+    </div>
+   </div>
+   <template #actions>
+    <button
+     class="outlined-btn"
+     @click="
+      () => {
+       showModal = false
+       showPaymentFailedModal = false
+       current_step--
+      }
+     "
+    >
+     OK
+    </button>
+   </template>
+  </Modal>
+  <Modal :show="showPaymentRedirectModal" @update:show="showPaymentRedirectModal = $event">
+   <div class="modal-content">
+    <div class="success-modal-header-text">
+     <h3>Redirecting You to FlutterWave</h3>
+    </div>
+
+    <div class="confirmation-text">
+     <h4>Click the button below if you're not auto redirected</h4>
+    </div>
+   </div>
+   <template #actions>
+    <a :href="paymentUrl" target="_blank">
+     <button
+      class="outlined-btn"
+      @click="
+       () => {
+        showPaymentFailedModal = false
+       }
+      "
+     >
+      Redirect
+     </button>
+    </a>
    </template>
   </Modal>
   <Modal :show="showPaymentSuccessModal" @update:show="showPaymentSuccessModal = $event">
@@ -160,6 +208,7 @@
 
 <script setup>
 import { reactive, ref } from 'vue'
+import { v4 as uuidv4 } from 'uuid'
 
 import Ticket from '../components/getTicketsPage/Ticket.vue'
 import DetailsForm from '../components/getTicketsPage/DetailsForm.vue'
@@ -169,10 +218,13 @@ import CountdownClock from '../components/CountdownClock.vue'
 import PaymentSuccessful from '../components/getTicketsPage/PaymentSuccessful.vue'
 
 const current_step = ref(1)
-const ticketToGet = reactive({})
-const customerDetails = reactive({})
-const showModal = ref(false)
-const showPaymentSuccessModal = ref(false)
+let ticketToGet = reactive({})
+let customerDetails = reactive({})
+let showModal = ref(false)
+let showPaymentSuccessModal = ref(false)
+let showPaymentFailedModal = ref(false)
+let showPaymentRedirectModal = ref(false)
+let paymentUrl = ref('')
 
 const newYearDate = ref(new Date('2024-08-12T00:00:00'))
 const tickets = reactive([
@@ -188,7 +240,8 @@ const tickets = reactive([
    'Pen',
    'Standard Level Refreshment',
    'Networking opportunities'
-  ]
+  ],
+  payment_event_id: '71a42d5a-2801-4002-9ec3-760d2d384c35'
  },
  {
   id: 2,
@@ -203,7 +256,8 @@ const tickets = reactive([
    'Entrance into raffle draw sponsored by one of our sponsors.',
    'Paper Bag.',
    'Premium Seating Space.'
-  ]
+  ],
+  payment_event_id: '83a4fe11-f8a5-4ca4-83ff-385862ffc7b6'
  },
  {
   id: 3,
@@ -218,7 +272,8 @@ const tickets = reactive([
    'Tote Bag',
    'Executive Seating Space.',
    'Event Brochure.'
-  ]
+  ],
+  payment_event_id: '6e6415fd-5942-47f0-9fd5-b5431b462e2a'
  },
  {
   id: 4,
@@ -234,9 +289,51 @@ const tickets = reactive([
    'A merch.',
    'Brand logo on our banner.',
    'A Pop Up Booth.'
-  ]
+  ],
+  payment_event_id: '129564f9-a2e9-4f34-8f13-56efc3c9b634'
  }
 ])
+
+const makePayment = async () => {
+ //  console.log(customerDetails)
+
+ let formData = {
+  currency: 'NGN',
+  email: customerDetails.email,
+  amount: ticketToGet.ticket_price,
+  customer_name: customerDetails.firstName + customerDetails.lastName,
+  event: ticketToGet.payment_event_id,
+  tx_ref: uuidv4()
+ }
+
+ try {
+  const response = await fetch('https://tedxsamaru.pythonanywhere.com/api/payments/initialize', {
+   method: 'POST',
+   headers: {
+    'Content-Type': 'application/json'
+   },
+   body: JSON.stringify(formData)
+  })
+
+  const result = await response.json()
+  console.log('result', result)
+  if (!response.ok) {
+   showPaymentFailedModal.value = true
+  }
+  if (response.ok) {
+   showModal.value = false
+   paymentUrl.value = result.payment_link
+   showPaymentRedirectModal.value = true
+  }
+  //   let response = result
+ } catch (error) {
+  console.log('error', error)
+
+  //   let error = error.message
+ } finally {
+  //    let loading = false
+ }
+}
 </script>
 
 <style lang="scss" scoped>

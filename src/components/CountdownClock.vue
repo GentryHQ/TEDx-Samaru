@@ -37,10 +37,6 @@ function calculateTimeLeft() {
  const target = new Date(props.targetDate)
  const difference = differenceInSeconds(target, now)
 
- console.log('Target Date:', target)
- console.log('Current Date:', now)
- console.log('Difference in Seconds:', difference)
-
  if (difference > 0) {
   days.value = Math.floor(difference / (60 * 60 * 24))
   hours.value = Math.floor((difference % (60 * 60 * 24)) / (60 * 60))
