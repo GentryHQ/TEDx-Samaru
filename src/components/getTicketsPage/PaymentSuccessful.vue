@@ -2,10 +2,6 @@
 import { ref, onMounted, onUnmounted, computed, watch } from 'vue'
 import { differenceInSeconds } from 'date-fns'
 
-defineProps({
- purchasedTicket: Object
-})
-
 const days = ref(0)
 const hours = ref(0)
 const minutes = ref(0)
@@ -80,24 +76,14 @@ watch(
    </div>
 
    <div class="content-wrapper">
-    <img :src="'/src/assets/images/tickets/' + purchasedTicket.ticket_img_name" />
     <h3>Thank You!</h3>
     <p>
      Thank you for purchasing your ticket to TEDx Samaru! You will receive a confirmation email with
      your e-ticket shortly. We look forward to seeing you at the event.
     </p>
-
-    <button
-     class="outlined-btn"
-     @click="
-      () => {
-       showPaymentSuccessModal = false
-       current_step++
-      }
-     "
-    >
-     Okay
-    </button>
+    <router-link to="/">
+     <button class="outlined-btn">Okay</button>
+    </router-link>
    </div>
   </div>
   <div class="event-details-section-wrapper">

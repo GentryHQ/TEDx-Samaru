@@ -8,7 +8,7 @@ defineEmits(['getTicket'])
 <template>
  <div class="ticket" :class="props.ticket.id == 4 ? 'ticket supporters-ticket' : 'ticket'">
   <div class="ticket-header">
-   <img class="" :src="'/src/assets/images/tickets/' + props.ticket.ticket_img_name" />
+   <img class="" :src="'/images/tickets/' + props.ticket.ticket_img_name" />
 
    <div class="ticket-prices">
     <h3>{{ props.ticket.ticket_title }}</h3>
