@@ -3,9 +3,9 @@
   <div class="hero">
    <div class="container">
     <img class="experience" src="../assets/images/about-page/experience.png" />
-    <h1>Get Your Ticket Now</h1>
+    <h1 class="register-title">Get Your Ticket Now</h1>
     <CountdownClock :targetDate="newYearDate"></CountdownClock>
-    <p>
+    <p class="ticket-p">
      Join us at TEDx Samaru for a day of inspiration and connection. Please fill out the form below
      to secure your ticket
     </p>
@@ -17,7 +17,6 @@
      <div v-show="current_step == 1">
       <div class="descriptions">
        <h2>Personal Information</h2>
-       <p>Tell us a bit about yourself</p>
       </div>
 
       <DetailsForm
@@ -173,11 +172,10 @@ const tickets = reactive([
   ticket_price: 5000,
   ticket_full_price: 8000,
   ticket_perks: [
-   'Hand Band',
-   'Jotter',
-   'Pen',
+   'TEDxSamaru Branded Hand Band',
+   'TEDxSamaru Branded Jotter',
+   'TEDxSamaru Branded Pen',
    'Standard Level Refreshment',
-   'Networking opportunities'
   ],
   payment_event_id: '71a42d5a-2801-4002-9ec3-760d2d384c35'
  },
@@ -190,10 +188,11 @@ const tickets = reactive([
   ticket_perks: [
    'Everything in Standard plus:',
    'Digital Certificate of Attendance.',
+   'Media Priority For Pictures', 
    'Premium Level Refreshment.',
-   'Entrance into raffle draw sponsored by one of our sponsors.',
-   'Paper Bag.',
-   'Premium Seating Space.'
+   'Entrance into Sponsored Raffle Draw.',
+   'TEDxSamaru Branded Gift Bag.',
+   'Reserved Premium Seating Space.'
   ],
   payment_event_id: '6e6415fd-5942-47f0-9fd5-b5431b462e2a'
  },
@@ -207,9 +206,11 @@ const tickets = reactive([
    'Everything in Premium plus:',
    'Executive Level Refreshment.',
    'Calligraphed Certificate.',
-   'Tote Bag',
-   'Executive Seating Space.',
-   'Event Brochure.'
+   'Networking Opportunities with Speakers',
+   'TEDxSamaru Branded Tote Bag',
+   'Special Executive Seating Space.',
+   'A beautiful surprise from the team.',
+   'Higher Media Priority for Pictures.'
   ],
   payment_event_id: '83a4fe11-f8a5-4ca4-83ff-385862ffc7b6'
  },
@@ -224,7 +225,7 @@ const tickets = reactive([
    'Part of post event publication.',
    'Exclusive access to the VIP lounge',
    'Personalize note.',
-   'A merch.',
+   'A TEDxSamaru Branded Merch.',
    'Brand logo on our banner.',
    'A Pop Up Booth.'
   ],
@@ -370,6 +371,13 @@ span {
  }
 }
 
+.ticket-p {
+width: 90%;
+text-align: center;
+margin: auto;
+margin-top: 20px;
+}
+
 .wrapper {
  margin-block: 20px 48px;
  padding: 3rem;
@@ -466,6 +474,7 @@ span {
 
  .descriptions {
   text-align: center;
+  margin-bottom: 40px;
   h2 {
    font-size: x-large;
   }
@@ -487,6 +496,9 @@ span {
  p {
   margin-block: 20px 48px;
  }
+}
+.register-title {
+ margin-top:20px;
 }
 
 .success-modal-header-text {

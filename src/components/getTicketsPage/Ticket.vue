@@ -99,6 +99,7 @@ defineEmits(['getTicket'])
  }
  .list > *:not(:last-child) {
   margin-bottom: 1rem; /* 20px */
+  margin-right: 0.5rem;
  }
  .list-item {
   margin-bottom: 0.3rem;
@@ -109,6 +110,7 @@ defineEmits(['getTicket'])
  .ticket-full-price {
   color: v.$primary-500;
   text-decoration: line-through;
+  margin-bottom: 20px;
  }
  .next-btn {
   width: 100%;

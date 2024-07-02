@@ -15,7 +15,7 @@ import SpeakerComp from '../components/SpeakerComp.vue'
      It’s not just ideas that change the world, but the audacity to bring them to life.
     </p>
     <div class="desktop">
-     <ButtonComp route-name="" hash="#newsletter">Subscribe to newsletter</ButtonComp>
+     <ButtonComp route-name="register">Get Your Tickets</ButtonComp>
     </div>
     <div class="mobile">
      <ButtonComp route-name="register">Get Your Tickets</ButtonComp>
