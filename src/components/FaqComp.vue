@@ -55,6 +55,12 @@ export default {
      open: false
     },
     {
+     question: "When will ticket sales for TEDxSamaru 2024 'ReInvent' end?",
+     answer:
+      'Ticket sales close on Saturday, July 27th. Don’t miss out—get your tickets now!',
+     open: false
+    },
+    {
      question: 'Who are the speakers?',
      answer:
       'Our speakers are trailblazers, visionaries and local heroes who have dared to reinvent across diverse fields like technology, business, science, art, and social impact. From award-winning innovators to activists reshaping norms, they take the iconic red circle to share their bold journeys of reinvention.',
