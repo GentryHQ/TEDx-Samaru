@@ -6,7 +6,8 @@ const form = reactive({
  firstName: '',
  lastName: '',
  email: '',
- phoneNumber: ''
+ phoneNumber: '',
+ referer: ''
 })
 defineEmits(['next'])
 
@@ -54,6 +55,14 @@ const disableButton = computed(() => {
      :placeholder="'Phone Number'"
      v-model="form.phoneNumber"
      :type="'tel'"
+    ></FormInput>
+    <FormInput
+     class="form-group"
+     :name="'referer'"
+     :label="'Referer'"
+     :placeholder="'If referred, enter the name of the person who referred you'"
+     v-model="form.referer"
+     :type="'text'"
     ></FormInput>
 
     <button :disabled="disableButton" class="next-btn" @click="$emit('next', form)">Next</button>

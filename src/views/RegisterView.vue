@@ -175,7 +175,7 @@ const tickets = reactive([
    'TEDxSamaru Branded Hand Band',
    'TEDxSamaru Branded Jotter',
    'TEDxSamaru Branded Pen',
-   'Standard Level Refreshment',
+   'Standard Level Refreshment'
   ],
   payment_event_id: '71a42d5a-2801-4002-9ec3-760d2d384c35'
  },
@@ -188,7 +188,7 @@ const tickets = reactive([
   ticket_perks: [
    'Everything in Standard plus:',
    'Digital Certificate of Attendance.',
-   'Media Priority For Pictures', 
+   'Media Priority For Pictures',
    'Premium Level Refreshment.',
    'Entrance into Sponsored Raffle Draw.',
    'TEDxSamaru Branded Gift Bag.',
@@ -241,6 +241,7 @@ const makePayment = async () => {
   email: customerDetails.email,
   amount: ticketToGet.ticket_price,
   customer_name: customerDetails.firstName + customerDetails.lastName,
+  referral: customerDetails.referer,
   event: ticketToGet.payment_event_id,
   tx_ref: uuidv4()
  }
@@ -372,10 +373,10 @@ span {
 }
 
 .ticket-p {
-width: 90%;
-text-align: center;
-margin: auto;
-margin-top: 20px;
+ width: 90%;
+ text-align: center;
+ margin: auto;
+ margin-top: 20px;
 }
 
 .wrapper {
@@ -498,7 +499,7 @@ margin-top: 20px;
  }
 }
 .register-title {
- margin-top:20px;
+ margin-top: 20px;
 }
 
 .success-modal-header-text {
