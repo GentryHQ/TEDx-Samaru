@@ -241,7 +241,7 @@ const makePayment = async () => {
   email: customerDetails.email,
   amount: ticketToGet.ticket_price,
   customer_name: customerDetails.firstName + customerDetails.lastName,
-  referral: customerDetails.referer,
+  referral: customerDetails.referrer,
   event: ticketToGet.payment_event_id,
   tx_ref: uuidv4()
  }
