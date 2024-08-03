@@ -8,6 +8,7 @@ import Contact from '../views/ContactView.vue';
 import NotFound from "../views/NotFound.vue";
 import Subscribed from "../views/SubscribedView.vue";
 import PaymentSuccess from "../views/PaymentSuccessView.vue";
+import ClosedSalesView from "../views/ClosedSalesView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,7 +36,7 @@ const router = createRouter({
     {
       path: '/register',
       name: 'register',
-      component: Register
+      component: ClosedSalesView
     },
     {
       path: '/contact',
