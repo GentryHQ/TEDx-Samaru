@@ -57,7 +57,7 @@ export default {
     {
      question: "When will ticket sales for TEDxSamaru 2024 'ReInvent' end?",
      answer:
-      'Ticket sales close on Saturday, July 27th. Don’t miss out—get your tickets now!',
+      'Ticket sales now closes on Sunday, August 25th by 11:59pm WAT. Don’t miss out—get your tickets now!',
      open: false
     },
     {
@@ -81,7 +81,7 @@ export default {
     {
      question: 'When and where will TEDxSamaru take place?',
      answer:
-      'TEDxSamaru will take place on the 10th of August 10th, at the Centre of Excellence, Ahmadu Bello University, Zaria.',
+      'TEDxSamaru has been rescheduled to take place on the 14th of September 2024, at the Centre of Excellence, Ahmadu Bello University, Zaria.',
      open: false
     }
    ]

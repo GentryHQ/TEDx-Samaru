@@ -99,7 +99,7 @@ import SpeakerComp from '../components/SpeakerComp.vue'
    </div>
   </div>
 
-  <!-- <section class="sponsors">
+  <section class="sponsors">
       <div class="container">
         <div class="sponsors-wrapper">
           <div class="words">
@@ -119,22 +119,12 @@ import SpeakerComp from '../components/SpeakerComp.vue'
           </div>
 
           <div class="imgs">
-            <img src="../assets/images/BEHTEL.png" alt="Sponsors">
-            <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors">
-            <img src="../assets/images/KIEWIT.png" alt="Sponsors">
-            <img src="../assets/images/BEHTEL.png" alt="Sponsors">
-            <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors">
-            <img src="../assets/images/KIEWIT.png" alt="Sponsors">
-            <img src="../assets/images/BEHTEL.png" alt="Sponsors">
-            <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors">
-            <img src="../assets/images/KIEWIT.png" alt="Sponsors">
-            <img src="../assets/images/BEHTEL.png" alt="Sponsors">
-            <img src="../assets/images/JULIUS-BERGER.png" alt="Sponsors">
-            <img src="../assets/images/KIEWIT.png" alt="Sponsors">
+            <img src="/images/sponsors/1.png" alt="Sponsors">
+            <img src="/images/sponsors/2.png" alt="Sponsors">
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
   <div></div>
 
