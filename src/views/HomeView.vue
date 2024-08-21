@@ -77,7 +77,7 @@ import SpeakerComp from '../components/SpeakerComp.vue'
   <div class="speaker">
    <div class="container">
     <h2>Meet our <span>seasoned</span> speakers</h2>
-    <p class="announcement">To be announced soon</p>
+    <p class="announcement"></p>
     <div class="speaker-wrapper">
      <SpeakerComp :isSlider="true" />
      <router-link :to="{ name: 'speakers' }" class="nBtn">

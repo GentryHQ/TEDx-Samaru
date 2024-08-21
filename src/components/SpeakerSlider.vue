@@ -89,7 +89,7 @@ export default {
   overflow: hidden;
   // transition: all 0.5s ease-in-out;
   width: 100%;
-  height: 400px !important;
+  height: auto !important;
 
   &:hover,
   &:focus {

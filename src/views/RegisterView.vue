@@ -3,11 +3,12 @@
   <div class="hero">
    <div class="container">
     <img class="experience" src="../assets/images/about-page/experience.png" />
+    <h3 class="register-title">Ticket Sales is Live Again, Dont miss out this time</h3>
     <h1 class="register-title">Get Your Ticket Now</h1>
     <CountdownClock :targetDate="newYearDate"></CountdownClock>
+    <h3 class="register-title">Countdown to TEDxSamaru 2024</h3>
     <p class="ticket-p">
-     Join us at TEDx Samaru for a day of inspiration and connection. Please fill out the form below
-     to secure your ticket
+        Due to the recent National protest, the TEDx event is now on September 14th. Please fill out the form below to secure your ticket.
     </p>
    </div>
   </div>
@@ -163,7 +164,7 @@ let showPaymentFailedModal = ref(false)
 let showPaymentRedirectModal = ref(false)
 let paymentUrl = ref('')
 
-const newYearDate = ref(new Date('2024-08-12T00:00:00'))
+const newYearDate = ref(new Date('2024-09-14T00:00:00'))
 const tickets = reactive([
  {
   id: 1,
@@ -259,6 +260,7 @@ const makePayment = async () => {
   console.log('result', result)
   if (!response.ok) {
    showPaymentFailedModal.value = true
+   console.log(response)
   }
   if (response.ok) {
    showModal.value = false

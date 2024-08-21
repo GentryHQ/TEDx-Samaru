@@ -36,7 +36,7 @@ const router = createRouter({
     {
       path: '/register',
       name: 'register',
-      component: ClosedSalesView
+      component: Register
     },
     {
       path: '/contact',
