@@ -108,7 +108,7 @@ import SpeakerComp from '../components/SpeakerComp.vue'
             </h2>
             <p>As a sponsor, we’re promising reach to thousands of people who are interested in your brand. What better
               way to get your brand in front of people.</p>
-            <router-link :to="{ name: 'home' }" class="nBtn">
+            <router-link :to="{ name: 'contact' }" class="nBtn">
               CONTACT US
               <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path

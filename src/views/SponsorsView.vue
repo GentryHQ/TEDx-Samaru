@@ -113,6 +113,10 @@
     </div>
    </div>
   </div>
+  <div class="sponsor-imgs">
+    <img src="/images/sponsors/1.png" alt="Sponsors">
+    <img src="/images/sponsors/2.png" alt="Sponsors">
+  </div>
 
   <div class="endNote">
    <div class="container">
@@ -145,6 +149,23 @@ const handleDownload = () => {
 <style lang="scss" scoped>
 @use '../assets/css/variables' as v;
 @use '../assets/css/mixin' as m;
+
+.sponsor-imgs {
+   flex-basis: 100%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   justify-items: center;
+   align-items: center;
+   margin-bottom: 40px;
+
+ img {
+    padding: 20px;
+    border: 1px solid rgb(199, 199, 199);
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    width: 30%
+  }
+}
 
 span {
  font-weight: inherit;
