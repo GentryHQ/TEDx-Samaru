@@ -38,7 +38,7 @@ let showPaymentFailedModal = ref(false)
 let showPaymentRedirectModal = ref(false)
 let paymentUrl = ref('')
 
-const newYearDate = ref(new Date('2024-08-10T00:00:00'))
+const newYearDate = ref(new Date('2024-09-14T00:00:00'))
 </script>
 
 <style lang="scss" scoped>
